@@ -1,5 +1,3 @@
-\begin{comment}
-
     - Citations at the end of a sentence with the period after the citation like this\cite{bibid}.
 
     - When making a reference to a figure or section, you should say Figure \ref*{label} or Section \ref*{label}, with the first letter capitalized.
@@ -42,11 +40,3 @@
     - Alterar a capa para a do ISEC: https://cloud.isec.pt/s/EFcdiiIwvAFZxVq
     Agradecimentos: Meter endividado
     - Revisão de português
-
-
-    todo:
-    Colocar os scripts python em anexo.
-
-    Info sobre horarios das formações para adicionar:
-
-\end{comment}

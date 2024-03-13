@@ -132,8 +132,6 @@
                 for tr in tr_elements:
                     td_elements = tr.find_all('td')
                     message = td_elements[3].get_text(strip=True)
-                    #print(f"td_elements:\n{td_elements}")
-                    #print(f"message:\n{message}")
                     if "Could not execute a built-in/extended action on activity 'IsSuspended" in message:
                         continue
                     else:
@@ -172,12 +170,9 @@
             # Iterate over the first two <tr> elements
             for tr in tr_elements[:2]:
                 td_elements = tr.find_all('td')
-                # Check if there are at least 7 <td> elements
                 if len(td_elements) >= 7:
-                    # Extract the date from the seventh <td> element
                     date_text = td_elements[6].get_text(strip=True)
                     
-                    # Append the date to the dates_list
                     dates_list.append(date_text)
             return dates_list
         
@@ -190,7 +185,7 @@
         
             # Check if the 'paint' variable is True, and if so, change the row color
             if paint:
-                fill = PatternFill(start_color="d69cff", end_color="d69cff", fill_type="solid")  # 800080 is the hexadecimal code for purple
+                fill = PatternFill(start_color="d69cff", end_color="d69cff", fill_type="solid")  # 800080 is purple
                 for cell in sheet[row_index + 2]:
                     cell.fill = fill
         

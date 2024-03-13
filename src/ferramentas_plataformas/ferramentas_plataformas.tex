@@ -5,17 +5,6 @@
     \subsection{OutSystems}\label{sec:outsystems}
     
         Estabelecida em 2001, a OutSystems é uma das principais plataformas mencionadas no desenvolvimento \textit{low-code}, foi desenhada com um fluxo empresarial em mente, facilitando a criação e entrega rápida de aplicações. A sua interface de desenvolvimento visual permite a construção de aplicações usando modelos visuais, ações, módulos e blocos reutilizáveis, e diferencia-se oferecendo um conjunto abrangente de ferramentas que cobrem todo o ciclo de vida da aplicação\cite{os-vision}.
-
-        \begin{comment}
-            !! Fazer um artigo sobre criar uma aplicação low code com recurso a mongoDB e azure.
-            Artigo, o ISEC ajuda a pagar.
-        
-            Fazer aplicação para o relatorio. 
-        
-            a gente usa o Azure Devops para ver os repos
-        
-            (Tem que have sempre texto aqui)
-        \end{comment}
                     
         %\input{src/ferramentas_plataformas/OS/center-studio-lifetime.tex}
 
@@ -23,56 +12,56 @@
 
         \input{src/ferramentas_plataformas/OS/competidores-os.tex}
 
-        \subsection{ServiceNow}\label{sec:service-now}
+    \subsection{ServiceNow}\label{sec:service-now}
 
-            \begin{figure}[htbp]
-                \centering
-                \includegraphics[width=\textwidth]{imgs/ServiceNow.png} % You can replace 'example-image-a' with the path to your actual image
-                %\caption{Plataforma ServiceNow - Pagina Principal}
-                \caption[Plataforma ServiceNow - Pagina Principal]{Plataforma ServiceNow - Pagina Principal\protect\footnotemark}\label{fig:service-ui}
-                \source{Plataforma Interna da ServiceNow}
-            \end{figure}
-            \footnotetext{alguma da informação nesta e em próximas imagens será censurada devido a questões de confidencialidade.}
+        \begin{figure}[htbp]
+            \centering
+            \includegraphics[width=\textwidth]{imgs/ServiceNow.png} % You can replace 'example-image-a' with the path to your actual image
+            %\caption{Plataforma ServiceNow - Pagina Principal}
+            \caption[Plataforma ServiceNow - Pagina Principal]{Plataforma ServiceNow - Pagina Principal\protect\footnotemark}\label{fig:service-ui}
+            \source{Plataforma Interna da ServiceNow}
+        \end{figure}
+        \footnotetext{alguma da informação nesta e em próximas imagens será censurada devido a questões de confidencialidade.}
 
-            A ServiceNow é uma das plataformas de referência na gestão de serviços empresariais, oferecendo uma ampla gama de funcionalidades para otimizar e automatizar processos internos. Destaca-se pela sua capacidade de integrar e gerir eficientemente serviços de TI, recursos humanos, gestão de projetos e muito mais, a página principal da aplicação está demonstrada na Figura \ref{fig:service-ui}. Fundada em 2004 pelo antigo CTO da Peregrine Systems, Fred Luddy, ServiceNow iniciou a sua existência num único computador portátil, numa pequena sala de escritório, apoiada por um único colaborador e um punhado de voluntários dedicados.
+        A ServiceNow é uma das plataformas de referência na gestão de serviços empresariais, oferecendo uma ampla gama de funcionalidades para otimizar e automatizar processos internos. Destaca-se pela sua capacidade de integrar e gerir eficientemente serviços de TI, recursos humanos, gestão de projetos e muito mais, a página principal da aplicação está demonstrada na Figura \ref{fig:service-ui}. Fundada em 2004 pelo antigo CTO da Peregrine Systems, Fred Luddy, ServiceNow iniciou a sua existência num único computador portátil, numa pequena sala de escritório, apoiada por um único colaborador e um punhado de voluntários dedicados.
 
-            A partir destes começos, Luddy propôs-se a criar uma plataforma baseada na nuvem para encaminhar o trabalho de forma eficaz, sendo suficientemente poderosa para impulsionar o sucesso empresarial, mas, simultaneamente, simples o suficiente para não afastar potenciais utilizadores. Não é surpreendente que este objetivo tenha chamado a atenção dos clientes. A empresa cresceu rapidamente e, em 2012, tornou-se pública.
-            
-            Desde então, ServiceNow expandiu significativamente as suas ofertas, e as mesmas prioridades que definiram a sua fundação há vinte anos continuam a defini-lo hoje: uma paixão por fazer as pessoas tirarem mais proveito da tecnologia. 
-            
-            Atualmente, as ofertas da ServiceNow incluem gestão de serviços de IT, gestão de operações de IT, gestão de serviços ao cliente, gestão de recursos humanos, operações de segurança, risco e conformidade, entrega de serviços no local de trabalho e gestão de serviços de campo - tudo numa só plataforma.
-
-            É através da ServiceNow que os utilizadores reportam os dois tipos de incidentes, request ou incidente, como explicado na secção \ref{sec:terminologia_do_projeto}. De seguida estes passam por uma equipa de suporte que tenta filtrar e resolver os incidentes mais simples, como utilizadores a utilizar mal a plataforma, ou por vezes incidentes que a equipa de desenvolvimento os instruiu a resolver, por exemplo, se um certo problema aparecer, instruam os utilizadores a apagar a cache do browser. Após esta fase, se não foi possível resolver, são enviados para a ServiceNow onde são analisados pelo team leader da equipa em triagem, que manda uma mensagem padrão para o utilizador a pedir desculpas pela inconveniência e a informar que se está investigar o problema, e prioriza os incidentes da seguinte forma:
-            \begin{itemize}
-                \item \textbf{Low} - Um erro de baixa importância que não bloqueia o utilizador, como uma desformatação do site;
-                \item \textbf{Medium} - Quando é mais urgente no sentido de poder afetar a funcionalidade da plataforma, mas haver como contornar o problema, como recarregar a página ou refazer o contrato;
-                \item \textbf{High} - Quando o utilizador está bloqueado e não consegue aceder à funcionalidade que necessita. Esta prioridade também pode ser dada a utilizadores de certas organizações maiores, no sentido de serem clientes mais importantes que a empresa quer garantir que mantém;
-                \item \textbf{Critical} - Prioridade atribuída a erros urgentes, como erros 502, qundo o site está em baixo e ninguém conseguir aceder.
-            \end{itemize}
-            Seguidamente, ao longo da vida de um incidente este será movido entre um dos seguintes estados, como se pode ver na Figura \ref{fig:servicenow-ui2}:
-            \begin{itemize}
-                \item \textbf{New:} Novo — O estado inicial de um incidente que acabou de ser recebido;
-                \item \textbf{Pending Triage:} Pendente de Triagem — Aguarda avaliação;
-                \item \textbf{Waiting for Data Fix:} Aguardando Correção de Dados — À espera que o \textit{datafix}, pedido à equipa da base de dados, seja efetuado;
-                \item \textbf{Urgent Issues (DEVs):} Problemas Urgentes (DEVs) — Incidentes críticos que requerem atenção imediata dos programadores;
-                \item \textbf{Need update:} Necessita de Atualização — Requer atualização ou informação adicional como por exemplo o UMR (Unique market reference) para identificar o contrato problemático do utilizador;
-                \item \textbf{Follow up:} Acompanhamento — À espera de feedback do utilizador para saber se o problema foi resolvido;
-                \item \textbf{Follow up second strike:} Acompanhamento segundo golpe — Segundo a política da empresa, após vinte e quatro horas volta-se a mandar mensagem ao utilizador e se nas vinte e quatro seguintes ainda não houver resposta, fecha-se o incidente;
-                \item \textbf{Waiting for release:} Aguardando Lançamento — Foi criado \textit{defect} a partir do incidente e espera-se que seja lançada a versão com a correção para produção.
-            \end{itemize}
-            
-            \begin{figure}[htbp]
-                \centering
-                \includegraphics[width=\textwidth]{imgs/ServiceNow2.png}
-                \caption{Plataforma ServiceNow - Incidentes}\label{fig:servicenow-ui2}
-                \source{Plataforma Interna da ServiceNow}
-            \end{figure}
-
-            \subsubsection{Competidores}\label{competidores-service-now} % devo manter, devo arranjar alternativas mesmo? todo
+        A partir destes começos, Luddy propôs-se a criar uma plataforma baseada na nuvem para encaminhar o trabalho de forma eficaz, sendo suficientemente poderosa para impulsionar o sucesso empresarial, mas, simultaneamente, simples o suficiente para não afastar potenciais utilizadores. Não é surpreendente que este objetivo tenha chamado a atenção dos clientes. A empresa cresceu rapidamente e, em 2012, tornou-se pública.
         
-                Neste ambiente altamente volátil e de alta competição no desenvolvimento de software empresarial existirão sempre ferramentas que podem substituir funcionalidades de outras, no entanto, no caso da ServiceNow é difícil encontrar uma que faça exatamente o que esta plataforma faz. 
-                
-                Na realidade o que se alcança com a plataforma ServiceNow pode ser já alcançado pelas ferramentas usadas como o Jira ou Confluence ou por outras como ClickUp[\ref{clickup}], mas a verdadeira vantagem da ServiceNow é a habilidade de ter tudo no mesmo sítio, sendo por isso uma ferramenta única na gestão empresarial.
+        Desde então, ServiceNow expandiu significativamente as suas ofertas, e as mesmas prioridades que definiram a sua fundação há vinte anos continuam a defini-lo hoje: uma paixão por fazer as pessoas tirarem mais proveito da tecnologia. 
+        
+        Atualmente, as ofertas da ServiceNow incluem gestão de serviços de IT, gestão de operações de IT, gestão de serviços ao cliente, gestão de recursos humanos, operações de segurança, risco e conformidade, entrega de serviços no local de trabalho e gestão de serviços de campo - tudo numa só plataforma.
+
+        É através da ServiceNow que os utilizadores reportam os dois tipos de incidentes, request ou incidente, como explicado na secção \ref{sec:terminologia_do_projeto}. De seguida estes passam por uma equipa de suporte que tenta filtrar e resolver os incidentes mais simples, como utilizadores a utilizar mal a plataforma, ou por vezes incidentes que a equipa de desenvolvimento os instruiu a resolver, por exemplo, se um certo problema aparecer, instruam os utilizadores a apagar a cache do browser. Após esta fase, se não foi possível resolver, são enviados para a ServiceNow onde são analisados pelo team leader da equipa em triagem, que manda uma mensagem padrão para o utilizador a pedir desculpas pela inconveniência e a informar que se está investigar o problema, e prioriza os incidentes da seguinte forma:
+        \begin{itemize}
+            \item \textbf{Low} - Um erro de baixa importância que não bloqueia o utilizador, como uma desformatação do site;
+            \item \textbf{Medium} - Quando é mais urgente no sentido de poder afetar a funcionalidade da plataforma, mas haver como contornar o problema, como recarregar a página ou refazer o contrato;
+            \item \textbf{High} - Quando o utilizador está bloqueado e não consegue aceder à funcionalidade que necessita. Esta prioridade também pode ser dada a utilizadores de certas organizações maiores, no sentido de serem clientes mais importantes que a empresa quer garantir que mantém;
+            \item \textbf{Critical} - Prioridade atribuída a erros urgentes, como erros 502, qundo o site está em baixo e ninguém conseguir aceder.
+        \end{itemize}
+        Seguidamente, ao longo da vida de um incidente este será movido entre um dos seguintes estados, como se pode ver na Figura \ref{fig:servicenow-ui2}:
+        \begin{itemize}
+            \item \textbf{New:} Novo — O estado inicial de um incidente que acabou de ser recebido;
+            \item \textbf{Pending Triage:} Pendente de Triagem — Aguarda avaliação;
+            \item \textbf{Waiting for Data Fix:} Aguardando Correção de Dados — À espera que o \textit{datafix}, pedido à equipa da base de dados, seja efetuado;
+            \item \textbf{Urgent Issues (DEVs):} Problemas Urgentes (DEVs) — Incidentes críticos que requerem atenção imediata dos programadores;
+            \item \textbf{Need update:} Necessita de Atualização — Requer atualização ou informação adicional como por exemplo o UMR (Unique market reference) para identificar o contrato problemático do utilizador;
+            \item \textbf{Follow up:} Acompanhamento — À espera de feedback do utilizador para saber se o problema foi resolvido;
+            \item \textbf{Follow up second strike:} Acompanhamento segundo golpe — Segundo a política da empresa, após vinte e quatro horas volta-se a mandar mensagem ao utilizador e se nas vinte e quatro seguintes ainda não houver resposta, fecha-se o incidente;
+            \item \textbf{Waiting for release:} Aguardando Lançamento — Foi criado \textit{defect} a partir do incidente e espera-se que seja lançada a versão com a correção para produção.
+        \end{itemize}
+        
+        \begin{figure}[htbp]
+            \centering
+            \includegraphics[width=\textwidth]{imgs/ServiceNow2.png}
+            \caption{Plataforma ServiceNow - Incidentes}\label{fig:servicenow-ui2}
+            \source{Plataforma Interna da ServiceNow}
+        \end{figure}
+
+        \subsubsection{Competidores}\label{competidores-service-now} % devo manter, devo arranjar alternativas mesmo? todo
+    
+            Neste ambiente altamente volátil e de alta competição no desenvolvimento de software empresarial existirão sempre ferramentas que podem substituir funcionalidades de outras, no entanto, no caso da ServiceNow é difícil encontrar uma que faça exatamente o que esta plataforma faz. 
+            
+            Na realidade o que se alcança com a plataforma ServiceNow pode ser já alcançado pelas ferramentas usadas como o Jira ou Confluence ou por outras como ClickUp[\ref{clickup}], mas a verdadeira vantagem da ServiceNow é a habilidade de ter tudo no mesmo sítio, sendo por isso uma ferramenta única na gestão empresarial.
 
     \subsection{Plataforma Atlas}\label{sec:ferramentas-atlas}
 
