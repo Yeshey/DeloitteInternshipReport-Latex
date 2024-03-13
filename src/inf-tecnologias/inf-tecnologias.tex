@@ -18,7 +18,7 @@
             
             Existem dois ambientes principais no Azure do projeto, \textit{RIL} e \textit{RIL SandPit}, onde o primeiro contém todas as VMs relacionadas com o ambiente de produção e o segundo todas as relacionadas com os outros ambientes e as suas diferentes finalidades. Cada ambiente tem a sua própria máquina virtual atribuída, no entanto os conceitos de \textit{scale up} e \textit{scale out} são relevantes na sua organização;
 
-            \textbf{Scale Up:} Refere-se ao aumento da capacidade de um sistema ou máquina virtual aumentar os recursos de um ou mais nodos já existentes da rede, ou neste caso, de uma só VM. Isto pode envolver o aumento do poder computacional da máquina como aumentar a quantidade de CPU, memória RAM ou armazenamento. Geralmente, este método é usado quando é necessário fazer uma tarefa única que requer muitos recursos apenas da máquina que a vai realizar, como, por exemplo, um deploy bastante extenso;
+            \textbf{Scale Up:} Refere-se ao aumento da capacidade de um sistema ou máquina virtual aumentar os recursos de um ou mais nodos já existentes da rede, ou neste caso, de uma só VM. Isto pode envolver o aumento do poder computacional da máquina como aumentar a quantidade de CPU, memória RAM ou armazenamento. Geralmente, este método é usado quando é necessário fazer uma tarefa única que requer muitos recursos apenas da máquina que a vai realizar, como, por exemplo, um \textit{deploy} bastante extenso;
 
             \textbf{Scale Out:} Diz respeito à expansão horizontal do sistema, cuja metodologia se foca na distribuição da carga entre vários nós ou servidores em vez de fortalecer um único dispositivo. É mais eficaz para lidar com cargas de trabalho dinâmicas, e é útil, por exemplo, nas horas de maior ou menor afluência de utilizadores\cite{scale-up-scale-out};
 
@@ -148,18 +148,18 @@
                     \source{Documentação Interna}
                 \end{table}
 
-            \subsubsection{Deployment Agreggator}\label{secsec:deployment-agreggator}
+            \subsubsection{\textit{Deployment Agreggator}}\label{secsec:deployment-agreggator}
 
             \begin{figure}[htbp]
                 \centering
                 \includegraphics[width=\textwidth]{imgs/DeploymentAggregator-Example.pdf} % You can replace 'example-image-a' with the path to your actual image
-                \caption{Deployment Aggregator}\label{fig:deployment-aggregator}
-                \source{Protótipo de um Deployment Aggregator com base na Documentação Interna}
+                \caption{\textit{Deployment Aggregator}}\label{fig:deployment-aggregator}
+                \source{Protótipo de um \textit{Deployment Aggregator} com base na Documentação Interna}
             \end{figure}
 
-            A cada par de meses, é gerado um novo ``Deployment Aggreggator'', um cronodiagrama que detalha o fluxo do código entre ambientes e as datas em que estes deploys devem ocorrer.
+            A cada par de meses, é gerado um novo ``Deployment Aggreggator'', um cronodiagrama que detalha o fluxo do código entre ambientes e as datas em que estes \textit{deploys} devem ocorrer.
              
-            Pode ter também a representação de férias ou freezes, um paradigma bastante usado em empresas, que se refere a períodos em que não há deploys e a maior parte dos trabalhadores não estão de serviço, por exemplo, por estarem de férias, podendo, no entanto, haver deploys de emergência. Este período é representado por retângulos vermelhos no deployment agreggator, Figura \ref{fig:deployment-aggregator}.
+            Pode ter também a representação de férias ou freezes, um paradigma bastante usado em empresas, que se refere a períodos em que não há textit{deploys} e a maior parte dos trabalhadores não estão de serviço, por exemplo, por estarem de férias, podendo, no entanto, haver \textit{deploys} de emergência. Este período é representado por retângulos vermelhos no \textit{deployment} agreggator, Figura \ref{fig:deployment-aggregator}.
             
             Existem dois ambientes de desenvolvimento, neste exemplo, TEST1 e TEST2, ambos com um ambiente de testes, DES e DED, respetivamente. Foram criados os dois para possibilitar o trabalho em duas \textit{sprints} de desenvolvimento, duas minors diferentes, por exemplo, simultaneamente. No protótipo de exemplo dado, está-se a trabalhar na minor 2.4 no ambiente DES e na minor 2.5 no ambiente DED. É possível ver que o código da 2.4 vai chegar a produção no dia 11 de dezembro, e que o código com a 2.5, que irá ser fundido no ambiente ADU, não tem ainda uma data definida para a chegada à produção devido ao freeze.
 

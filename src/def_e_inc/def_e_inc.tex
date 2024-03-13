@@ -56,7 +56,7 @@
                 Sendo um GAP, é passado à equipa relevante para a US ser alterada, caso contrário avança-se para o próximo passo: 
                 \item De seguida deve-se identificar o ambiente em que se deve testar e resolver o \textit{defect};
                 
-                Existe um campo ``Target Fix Release'' que indica a release em que o \textit{defect} deverá ser resolvido, esta informação deve ser ligada ao deployment aggregator para identificar em qual dos ambientes de desenvolvimento se deve prosseguir, no caso dos ambientes do protótipo da Figura \ref{fig:deployment-aggregator}, os ambientes DED ou DES.  
+                Existe um campo ``Target Fix Release'' que indica a release em que o \textit{defect} deverá ser resolvido, esta informação deve ser ligada ao \textit{deployment aggregator} para identificar em qual dos ambientes de desenvolvimento se deve prosseguir, no caso dos ambientes do protótipo da Figura \ref{fig:deployment-aggregator}, os ambientes DED ou DES.  
                 \item Deve-se então atualizar o ``Assignee'' para o nosso utilizador na plataforma;
                 \item Analisar, preparar e corrigir o \textit{defect} na plataforma Service Studio atualizando sempre o estado no \textit{defect} apropriadamente, neste caso de \textit{New} para \textit{In Analysis} para \textit{Ready For Development} conforme o flow demonstrado na Figura \ref{fig:defect-workflow};
                 \item De seguida o mais apropriado será alinhar com os maestros. Para tal será necessário realizar testes e revisões do código e possivelmente retrofit para um ambiente mais a baixo, são também criadas ``subtasks'' para estas tarefas que são, no entanto,  frequentemente realizadas por outras equipas. 
@@ -161,7 +161,7 @@
                     
                     Retiraram-se então as ações auxiliares e atualizou-se o estado do \textit{defect} adequadamente;
                     
-                    \item Nesta etapa comunicou-se com o nosso líder de equipa, e foi necessário reverter as mudanças. O leitor pode ter-se apercebido que o segundo ponto não seguia o padrão de análise de \textit{defects} estabelecido na Secção \ref{secsec:analise_de_defects}. Era necessário analisar o deployment aggregator e não apenas resolver o defeito no ambiente de desenvolvimento em que este ocorria. 
+                    \item Nesta etapa comunicou-se com o nosso líder de equipa, e foi necessário reverter as mudanças. O leitor pode ter-se apercebido que o segundo ponto não seguia o padrão de análise de \textit{defects} estabelecido na Secção \ref{secsec:analise_de_defects}. Era necessário analisar o \textit{deployment aggregator} e não apenas resolver o defeito no ambiente de desenvolvimento em que este ocorria. 
                     
                     Veio-se a descobrir que durante aquele período o código de ambas as plataformas de desenvolvimento deveria ser idêntico dado que o código de uma iria substituir a outra brevemente. Pelo que a resolução foi revertida e a análise foi guardada apenas como informação no \textit{defect}, que mais tarde foi usada por um colega que aplicou a resolução na altura e no ambiente correto.
                 \end{enumerate}
