@@ -1,0 +1,177 @@
+% In VSC: CTRL  ALT + J to go from code to PDF
+% CTRL + Click to go from pdf to code
+
+% Should be centered in the main page
+\usepackage{titling}
+\renewcommand\maketitlehooka{\null\mbox{}\vfill}
+\renewcommand\maketitlehookd{\vfill\null}
+
+% so you can use \begin{sortedlist}
+% https://tex.stackexchange.com/questions/121489/alphabetically-display-the-items-in-itemize    
+\usepackage{datatool}% http://ctan.org/pkg/datatool
+\newcommand{\sortitem}[1]{%
+  \DTLnewrow{list}% Create a new entry
+  \DTLnewdbentry{list}{description}{#1}% Add entry as description
+}
+\newenvironment{sortedlist}{%
+  \DTLifdbexists{list}{\DTLcleardb{list}}{\DTLnewdb{list}}% Create new/discard old list
+}{%
+  \DTLsort{description}{list}% Sort list
+  \begin{itemize}%
+    \DTLforeach*{list}{\theDesc=description}{%
+      \item \theDesc}% Print each item
+  \end{itemize}%
+}
+
+% IF WRITING IN ENGLISH CHANGE THIS TO "Source: " INSTEAD OF "Fonte: "
+\newcommand{\source}[1]{\vspace{-3pt} \caption*{ Fonte: {#1}} } % to add source to images
+
+% ----- subsubsubsection
+\usepackage{titlesec}
+
+\titleclass{\subsubsubsection}{straight}[\subsection]
+
+\newcounter{subsubsubsection}[subsubsection]
+\renewcommand\thesubsubsubsection{\thesubsubsection.\arabic{subsubsubsection}}
+\renewcommand\theparagraph{\thesubsubsubsection.\arabic{paragraph}} % optional; useful if paragraphs are to be numbered
+
+\titleformat{\subsubsubsection}
+  {\normalfont\normalsize\bfseries}{\thesubsubsubsection}{1em}{}
+\titlespacing*{\subsubsubsection}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+\makeatletter
+\renewcommand\paragraph{\@startsection{paragraph}{5}{\z@}%
+  {3.25ex \@plus1ex \@minus.2ex}%
+  {-1em}%
+  {\normalfont\normalsize\bfseries}}
+\renewcommand\subparagraph{\@startsection{subparagraph}{6}{\parindent}%
+  {3.25ex \@plus1ex \@minus .2ex}%
+  {-1em}%
+  {\normalfont\normalsize\bfseries}}
+\def\toclevel@subsubsubsection{4}
+\def\toclevel@paragraph{5}
+\def\toclevel@paragraph{6}
+\def\l@subsubsubsection{\@dottedtocline{4}{7em}{4em}}
+\def\l@paragraph{\@dottedtocline{5}{10em}{5em}}
+\def\l@subparagraph{\@dottedtocline{6}{14em}{6em}}
+\makeatother
+
+\setcounter{secnumdepth}{4} % Sections depth with numbering
+\setcounter{tocdepth}{2} % Sections depth in the TOC
+% ----- subsubsubsection
+
+% allow deeper nesting
+% https://stackoverflow.com/questions/1935952/maximum-nesting-level-of-lists-in-latex
+\usepackage{enumitem}
+\setlistdepth{9}
+\setlist[itemize,1]{label=$\bullet$}
+\setlist[itemize,2]{label=$\bullet$}
+\setlist[itemize,3]{label=$\bullet$}
+\setlist[itemize,4]{label=$\bullet$}
+\setlist[itemize,5]{label=$\bullet$}
+\setlist[itemize,6]{label=$\bullet$}
+\setlist[itemize,7]{label=$\bullet$}
+\setlist[itemize,8]{label=$\bullet$}
+\setlist[itemize,9]{label=$\bullet$}
+\renewlist{itemize}{itemize}{9}
+
+% make new sections start on odd pages even on oneside article document, needs to be after the subsubsubsection redefinition
+% https://tex.stackexchange.com/a/51928
+%\usepackage[strict]{changepage}% http://ctan.org/pkg/changepage
+%\newcommand{\evenpagesection}{%
+%  \global\let\oldsection\section
+%  \renewcommand\section{%
+%    \clearpage\checkoddpage%
+%    \ifoddpage\null\clearpage\fi%
+%    \oldsection
+%  }%
+%}
+%\evenpagesection % activate starting sections on an even page
+% new method
+% https://tex.stackexchange.com/questions/443453/start-sections-on-odd-pages-article-class
+\usepackage{etoolbox}
+\pretocmd{\section}{\cleardoublepage}{}{}
+
+% -------------------------------------------------------------------
+% Pacotes básicos
+\usepackage[main=portuguese, english]{babel}										% Idioma a ser usado
+% Trocar "english" para "portuguese" para artigos escritos em língua portuguesa (brazil também dá) 
+\usepackage[utf8]{inputenc}										% Escrita de caracteres acentuados e cedilhas - 1
+\usepackage[T1]{fontenc}										% Escrita de caracteres acentuados + outros detalhes técnicos fundamentais
+% -------------------------------------------------------------------
+% Pacotes matemáticos
+\usepackage{amsmath,amsfonts,amssymb,amsthm,cancel,siunitx,
+calculator,calc,mathtools,empheq,latexsym}
+% -------------------------------------------------------------------
+% Pacotes para inserção de figuras e subfiguras
+\usepackage{subfig,epsfig,tikz,float}		            % Packages de figuras. 
+\usepackage{pgfplots} % For graphs and plots
+\pgfplotsset{compat=1.18} % specify the version of the pakage bc its updated frequently
+% -------------------------------------------------------------------
+% Pacotes para inserção de tabelas
+\usepackage{booktabs,multicol,multirow,tabularx,array}          % Packages para tabela
+\usepackage{xcolor}
+\usepackage{tabularray} % usar o tblr (better tabularx alternative)
+% -------------------------------------------------------------------
+\usepackage{pgfgantt} % gantt charts
+% -----------------------------------------------------------------
+\usepackage{fancyhdr} % For copyright notice at the end
+% -----------------------------------------------------------------
+\usepackage{csquotes}
+\usepackage{verbatim} % so you can use \begin{comment} adn \end{comment}
+\usepackage{graphicx}
+\usepackage{lipsum}% http://ctan.org/pkg/lipsum
+\usepackage{svg}  % For including SVG images with \includesvg[width=0.4\textwidth]{imgs} instead of \includegraphics[...
+
+\usepackage[style=ieee, backend=biber]{biblatex} % \usepackage{biblatex} % to use .bib files for references
+\addbibresource{references.bib}  % Specify the path to your .bib file
+
+\usepackage{pmboxdraw}
+\usepackage{listings} % for code
+\usepackage{microtype} % For better justification?
+
+% To attach pdfs
+\usepackage{pdfpages}
+\pdfminorversion=7 % allow more recent pdfs
+
+%Select font:
+\usepackage{times} % Times New Roman (?)
+%\usepackage{carlito} % Arial?
+\usepackage{romannum} % Use \Romannum{17} or \romannum{17}
+
+% Paragraphs
+%\setlength{\parskip}{\baselineskip}%
+%\setlength{\parskip}{8pt}
+\usepackage[skip=10pt plus1pt, indent=20pt]{parskip} % makes TOC look better as well
+% redefining maketitle to have the logos - https://tex.stackexchange.com/questions/357769/add-a-picture-before-book-title
+\usepackage{titling}
+
+% To center the first page 
+% https://tex.stackexchange.com/questions/57158/centered-title-page-in-twoside-report
+\usepackage[margin=1in,bindingoffset=.2in]{geometry} %% Remove showframe in your document
+
+\usepackage{xurl} % to make links in the bibliography not overflow
+
+\usepackage[colorlinks=true, allcolors=blue]{hyperref} % should be last package
+\usepackage{attachfile2} % needs to be after hyperref?
+
+% margins
+% normally you shouldn't mess with margins, refer to here why they're usually so big: https://tex.stackexchange.com/questions/71172/why-are-default-latex-margins-so-big
+% \usepackage{geometry}
+% sizes taken from ISEC thesis template
+% \geometry{paper=a4paper, 
+% 	lmargin=2.54cm, rmargin=2.54cm, 
+% 	tmargin=2.54cm, bmargin=2.54cm }
+% Margins like Word:
+% https://tex.stackexchange.com/questions/35892/latex-optimal-settings-for-ms-word-like-document
+% \usepackage[tmargin=1in,bmargin=1in,lmargin=1.25in,rmargin=1.25in]{geometry}.
+
+% Make the document black/dark, looking good
+%\pagecolor{black}
+%\color{white}%
+%\definecolor{mylinkcolor}{HTML}{81cfff} % same that google uses
+%\hypersetup{
+%  colorlinks=true,
+% allcolors=mylinkcolor
+%}
