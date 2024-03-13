@@ -1,0 +1,179 @@
+\section{Introdução}\label{sec:introducao}
+    \pagenumbering{arabic} % Change the numbering for the mainmatter
+
+    Este relatório descreve o projeto e atividades desenvolvidas durante o estágio curricular do autor para a conclusão da sua licenciatura realizada no Instituto Politécnico de Coimbra, realizado na Deloitte Touche Tohmatsu Limited. O percurso divide-se em duas fases, uma primeira direcionada à formação e integração do estagiário e a segunda direcionada ao projeto, sua infraestrutura e às diferentes tarefas resolvidas no âmbito deste.
+
+    Entre as formações ministradas incluem-se PL/SQL, Java, Excel, SQL e Modelação, Agile e Scrum, OutSystems, Azure, OWASP e MongoDB. Além disso, foram oferecidas formações de curta duração abordando tópicos como Boas Práticas de Desenvolvimento, Banca, Seguros, \textit{Getting Things Done} e \textit{Capability Maturity Model Integration} (CMMI).
+
+    A aplicação prática de tecnologias no estágio passou pela utilização de ferramentas como OutSystems, Excel, SQL, MongoDB Query Language (MQL), Azure e até a programação em Python. Detalhes mais específicos sobre estas experiências e as suas aplicações serão descritos nos capítulos subsequentes.
+
+    \subsection{ISEC}\label{subsec:isec}
+        % Falar do ISEC
+        % Podes falar um pouco sobre a cidade
+    
+        O \href{https://isec.pt/}{Instituto Superior de Engenharia de Coimbra} (ISEC) É uma subdivisão do \href{https://ipc.pt/}{Instituto Politécnico de Coimbra} (IPC) dedicada às engenharias do instituto.
+    
+        É uma instituição com várias décadas de história, sendo possível traçar relação ao Instituto Industrial e Comercial de Coimbra fundado em 1921\cite{iscac} fundado com a intenção de atender à crescente necessidade de engenheiros especializados. Foi dividida no Instituto Superior de Engenharia de Coimbra e no Instituto Comercial de Coimbra devido ao Decreto-Lei n.º 830\cite{iscac} em 1974 que converteu os institutos industriais em institutos superiores de engenharia. Foi apenas em 1988\cite{wiki-isec} através do Decreto-Lei nº389/88\cite{decreto389/88} que foi integrado no Ensino Superior Politécnico, consolidando a instituição ainda mais como uma das escolas principais de engenharia em Portugal, continuando até hoje a expandir a sua oferta formativa de modo a se adaptar à indústria bastante volátil.
+    
+        O ISEC oferece uma vasta gama de cursos a vários níveis académicos tendo CTeSPs, licenciaturas e mestrados e cobrindo vários ramos de engenharia, alguns destes cursos são: Bioengenharia, Engenharia Biomédica, Engenharia Eletrotécnica e de Computadores, Engenharia Eletromecânica, Engenharia Civil, Engenharia e Gestão Industrial e muitos mais, destingindo-se devido ao seu método prático de aprendizagem e à sua proximidade com o mercado de trabalho, oferecendo bastantes oportunidades de contacto com empresas, muitas vezes sendo intrínseco ao currículo do curso.
+    
+        A vida no campus é também bastante rica, havendo uma abundância de atividades extra curriculares e associações académicas que contribuem para o desenvolvimento das bastante procuradas no mercado ``Soft Skills'', destas atividades fazem parte: A Tuna do ISEC, o EcoCampus do ISEC, a Associação de Estudantes, a Comissão de Estudantes, o Serviço de Apoio à Praxe (SAP), várias instalações e equipas de desporto como a equipa de futebol do IPC, e eventos mais chegados às empresas como a Feira de Engenharia de Coimbra (FENGE), o Fikalab ou o PoliEmpreende, entre outros. Estimulando assim o pensamento crítico e o crescimento social dos alunos, ajudando também na construção de conexões relevantes para o mercado de trabalho.
+    
+        A própria cidade de Coimbra é bastante acolhedora academicamente sendo frequentemente referida como ``A cidade dos estudantes'', é casa da universidade mais antiga de Portugal\cite{universidade-coimbra} bem como a mais antiga associação de estudantes do país\cite{wiki-associacao}. Providenciando assim um ambiente académico que incita à criatividade e à exploração.
+    
+        Em conclusão, o ISEC é uma escola de engenharia bastante prestigiada e procurada por empresas de todo o país, com sólidos princípios de profissionalismo e qualidade capaz de prestar uma educação de excelência e bastante próxima do mercado aos estudantes que por lá passam, tendo tido o privilégio de experienciar em primeira mão esta instituição de ensino de renome.
+    
+    
+    \subsection{Deloitte}\label{subsec:deloitte}
+
+        % audit - auditar uma empresa
+        % accountent - contabilista
+    
+        A empresa foi fundada por William Welch Deloitte em 1845 em Londres, um jovem visionário que começara a trabalhar aos 15 anos como assistente do Administrador do ``Bankruptcy Court'' onde começou a adquirir a sua experiência na área da consultaria que mais tarde aplicou na empresa. 
+        Ao longo da vida de William, a empresa foi bastante bem sucedida e sofreu grandes alterações, isto por ter sido fundada numa época de grande crescimento económico em Londres. No seu primeiro ano, teve quase 100 clientes, muitos deles passando por uma fase no ``Bankruptcy Court''. Em 1849, William tornou-se contabilista para a Great Western Railway, uma das primeiras empresas de capital aberto em Londres\cite{william-deloitte}. Em 1857 teve o seu primeiro parceiro, mudando o nome da empresa para Deloitte and Greenwood e em 1880 foi aberto o primeiro escritório em New York\cite{deloitte-uk-history-yt}. Deixou a empresa em 1897 com 70 funcionários\cite{william-deloitte}.
+    
+        Hoje em dia, a Deloitte é uma das maiores consultoras do mundo, sendo frequentemente mencionada como uma das ``big four'' com outras como a PwC, EY e KPMG\cite{euronews-bigfour}, dando trabalho a mais de \num{415000} pessoas\cite{deloitte-stats}.
+    
+        Até hoje mantém-se uma empresa privada, pelo que as ações não são trocadas publicamente, mas oferece relatórios anuais com estatísticas em relação ao valor da empresa, aos empregados contratados, ao impacto ambiental, etc.
+        Tendo reportado uma receita global de \num{64.9} mil milhões de US\$ para o ano Fiscal de 2023 com um aumento de 14.9\% em moeda local comparado com 2022\cite{deloitte_in_2023}.
+        
+        % If by the end of the report there is a deloitte report for 2023 put a graph here!
+    
+        A Deloitte oferece uma vasta gama de serviços que são de forma geral divididos entre várias categorias, incluindo: Auditoria e Seguros, Consultoria, Consultoria Financeira, Consultoria em Gestão de Risco, Impostos e Consultoria Jurídica.
+        
+        Existe na empresa uma forte ética de trabalho, havendo estruturas que se certificam que todos os membros estão a par dela, tendo uma plataforma de e-learnings dos quais alguns são obrigatórios a todos os membros para nos ensinar de forma interativa assuntos como a ética da empresa, os valores, e todos os assuntos internos relevantes. 
+    
+        A segurança dos dados constitui uma grande prioridade para a empresa, fazendo questão que o ambiente de desenvolvimento e comunicação de cada membro esteja atualizado e livre de software de terceiros, tendo por isso a sua própria loja de software interno da qual apenas comparticipa software devidamente examinado e aprovado para uso.
+    
+        É bastante acolhedora para novos contratados, providenciando os materiais de trabalho, não necessitando assim que os empregados contribuam com qualquer equipamento.
+        
+        A Deloitte leva muito a sério as formações dos seus contratados, pelo que organiza formações e muitas vezes oferece-se para pagar certificações aos colaboradores. A Deloitte oferece formações relevantes para os novos contratados numa vasta gama de tecnologias preparando os formandos para qualquer projeto em que possam vir a ser introduzidos. No estágio em estudo, houve o privilégio de participar em formações de PL/SQL, Java, Excel, SQL e Modelação, Boas Práticas de Desenvolvimento, Banca, Seguros, Agile/Scrum, Getting Things Done, Capability Maturity Model Integration (CMMI), Testes, OutSystems e Azure.
+    
+    \subsection{Contextualização}\label{subsec:contextualizacao}
+
+        Devido ao modelo de \textit{outsourcing} da Deloitte e a assuntos de confidencialidade, não é possível mencionar diretamente o nome da empresa para a qual o trabalho foi feito, pelo que, sempre que necessário, este relatório referir-se-á à empresa pelo nome RIL (RiskGuard Insurance Limited).
+    
+        A RIL é uma nova plataforma eletrónica de negociação para o mercado de seguros de Londres. É o mercado de Londres reconstruído e reinventado para um ambiente digital, visa disseminar valores como a flexibilidade, intuitividade e eficiência, tornando o mercado de Londres um mercado moderno.
+
+        No âmbito do estágio, as funções desempenhadas focaram-se na identificação e correção de \textit{defects}\footnote{uma incongruência identificada entre o funcionamento do programa e as USs (User Stories) definidas. São identificados com uma prioridade e registados na Jira como descrito na Secção \ref{secsec:jira}.} e incidentes\footnote{problemas submetidos por utilizadores da aplicação através da ServiceNow [\ref{sec:service-now}], o utilizador pode marcar a submissão de duas formas: Request ou Incidente, refira à Secção \ref{bulletlist:incidentes}} na plataforma RIL, bem como a realização de testes, o reprocessamento de processos ou a execução de quaisquer outras tarefas pedidas. A necessidade deste estágio surgiu da importância em aprimorar a estabilidade e eficiência da plataforma, e da alta pressão a ser sentida, especialmente na área de triagem, no projeto. Os \textit{defects} e problemas encontrados não só comprometem a integridade do sistema como também afetam a experiência do utilizador. As alterações propostas e o trabalho realizado visam não apenas corrigir estas questões, mas também implementar melhorias que fortalecerão a base digital da RIL para o futuro do mercado de seguros de Londres.
+
+        % Contextualçização: Explicar o papel do estagiario na aplicação - que fiz defects e bugs e porquê que eles existem, é a razão pelo qual o estágio foi pedido, as alterações que no projeto são precisos
+    
+    \subsection{Objetivos}\label{subsec:objetivos}
+
+        Os objetivos do relatório de estágio poderão ser divididos em duas categorias: os objetivos curriculares, e os objetivos da companhia para o estágio:
+    
+        \textbf{Objetivos Curriculares:}
+        \begin{itemize}
+          \item Promover as capacidades técnicas do aluno nas variadas ferramentas utilizadas, incluindo o ecossistema de OutSystem, Azure, MongoDB e ferramentas de colaboração como o Jira e o Teams;
+          \item Promover o desenvolvimento das ``soft-skills'' do aluno através do contacto e comunicação constante entre equipas e utilizadores num contexto profissional;
+          \item Dar a oportunidade ao aluno de aplicar os conhecimentos académicos num contexto profissional, aprendendo também como é que um ambiente assim funciona;
+        \end{itemize}
+    
+        \textbf{Objetivos para a empresa:}
+        \begin{itemize}
+          \item Analisar, documentar, criar, categorizar, e resolver \textit{defects} do projeto;
+          \item Analisar ``Incidents'' de utilizadores, falando com eles se necessário, corrigi-los se necessário ou reportando \textit{defects} deles;
+          \item Perceber a logística do projeto, as variadas ferramentas e equipas que nele trabalham para poder delegar certas tarefas, perguntas ou problemas à equipa certa. Desta forma maximizando a eficácia da solução;
+          \item Ganhar conhecimento dos funcionamentos internos da empresa, nomeadamente, através dos e-learnings, o preenchimento mensal da ``timesheet'' e ``expense report'', as variadas plataformas da Deloitte e o objetivo de cada uma delas.
+        \end{itemize}
+    
+    \subsection{Plano de Trabalhos}\label{subsec:plano-trabalhos}
+          
+        O plano de trabalhos previsto ao ser aceite o estágio, tinha objetivos gerais de integração numa equipa e aprendizagem do funcionamento da profissão num contexto empresarial, como se pode ver no Anexo \ref{sec:prop-estagio}. Para o projeto RIL, no contexto do estágio, o plano de trabalhos poderá ser dividido em três etapas:
+
+        \begin{enumerate}
+          \item Uma fase de formação em tecnologias como OutSystems, MongoDB e Azure como preparação para as tecnologias usadas. Como muitas das fases descritas, não existe uma data precisa que marque o fim desta etapa e o início da próxima, implicando, por isso, que estas formações muitas vezes coincidam com o resto do estágio;
+          \item Um período de familiarização com os funcionamentos gerais da aplicação e ferramentas de desenvolvimento e gestão de equipas. Esta fase será constante até ao termo do estágio devido à velocidade de desenvolvimento do projeto e ao seu tamanho, pelo que é impossível a um dado momento estar a par de todos as suas complexidades;
+          \item Tarefas rotativas delegadas às diferentes equipas que mudam a cada duas semanas:
+            \begin{itemize}
+                \item \textbf{Triagem:} Contacto com problemas reportados diretamente por utilizadores e aplicar uma solução imediata à base de dados ou ao método do utilizador. Se não for possível, é criado um \textit{defect}, isto é, um erro da aplicação para ser analisado e resolvido na lógica da app;
+                \item \textbf{Resolução de Problemas semanais:} Problemas semanais relacionados com logística e outros assuntos difíceis de prever que têm que ser analisados como averiguações de segurança, desempenho, de processos com erros, etc.
+                \item \textbf{Resolução de Defects:} A análise de \textit{defects}, inspeção do código em questão e mudança do mesmo no ambiente correto de forma a resolver o problema. % Referir à secção X para mais informação sobre defects e a sua resolução
+                
+            \end{itemize}
+
+        \end{enumerate}
+    
+        No final pode-se aferir que as tarefas previstas foram executadas, mas houveram outras não necessariamente planeadas que formaram também uma boa parte do estágio, uma representação fidedigna das tarefas e respetiva calendarização pode-se ver no mapa de Gantt da Figura \ref{mapadegantt}.
+
+        % https://texdoc.org/serve/pgfgantt/0
+        % https://tex.stackexchange.com/questions/473597/gantt-chart-looks-squished-because-small-time-slot-unit
+        % https://tex.stackexchange.com/questions/570631/gantt-chart-bar-label-spacing-issues
+        \definecolor{color1}{HTML}{276EE8}
+        \definecolor{color2}{HTML}{27E865}
+        \definecolor{color3}{HTML}{27E8E8}
+        \definecolor{color4}{HTML}{27ABE8}
+        \begin{figure}[htbp]
+            \centering
+
+            \begin{ganttchart}[
+                hgrid,
+                vgrid={*{6}{draw=none}, dotted},
+                x unit=0.87mm,
+                time slot format=isodate,
+                time slot unit=day,
+                calendar week text={\tiny{W\currentweek{}}}
+            ]{2023-09-19}{2024-03-15}
+                \gantttitlecalendar{year, month=shortname, week} \\
+            
+                % Activities
+                \ganttbar[bar/.append style={fill=color1, opacity=0.8}]{1)}{2023-09-19}{2023-11-13} \\
+                \ganttbar[bar/.append style={fill=color2, opacity=0.8}]{2)}{2023-10-23}{2024-03-15} \\
+                \ganttbar[bar/.append style={fill=color3, opacity=0.8}]{3)}{2023-11-14}{2024-02-29} \\
+                \ganttbar[bar/.append style={fill=color4, opacity=0.8}]{4)}{2023-11-14}{2023-12-11} \\
+                \ganttbar[bar/.append style={fill=color1, opacity=0.8}]{5)}{2023-12-12}{2024-01-08} \\
+                \ganttbar[bar/.append style={fill=color2, opacity=0.8}]{6)}{2023-12-23}{2024-01-01} \\
+                \ganttbar[bar/.append style={fill=color3, opacity=0.8}]{7)}{2024-01-09}{2024-01-29} \\
+                \ganttbar[bar/.append style={fill=color4, opacity=0.8}]{8)}{2024-01-23}{2024-02-29} \\
+            \end{ganttchart}
+
+            \begin{enumerate}[nosep, label=\arabic*)]
+                \item \fcolorbox{black}{color1}{\rule{0pt}{6pt}\rule{6pt}{0pt}} Período exclusivo a formações oferecidas pela Deloitte;
+                \item \fcolorbox{black}{color2}{\rule{0pt}{6pt}\rule{6pt}{0pt}} Redação do relatório de estágio;
+                \item \fcolorbox{black}{color3}{\rule{0pt}{6pt}\rule{6pt}{0pt}} Projeto RIL;
+                \item \fcolorbox{black}{color4}{\rule{0pt}{6pt}\rule{6pt}{0pt}} Adaptação à equipa e resolução de defeitos;
+                \item \fcolorbox{black}{color1}{\rule{0pt}{6pt}\rule{6pt}{0pt}} Resolução de incidentes;
+                \item \fcolorbox{black}{color2}{\rule{0pt}{6pt}\rule{6pt}{0pt}} Férias de natal;
+                \item \fcolorbox{black}{color3}{\rule{0pt}{6pt}\rule{6pt}{0pt}} Execução de testes e reprodução de defeitos;
+                \item \fcolorbox{black}{color4}{\rule{0pt}{6pt}\rule{6pt}{0pt}} Reprocessamento de processos de produção.
+            \end{enumerate}
+            
+            \caption{Mapa de Gantt das atividades no estágio}\label{mapadegantt}
+        \end{figure}
+
+    \subsection{Metodologia de Trabalho}\label{subsec:metodo-trabalho}
+
+        As condições e métodos gerais de trabalho na Deloitte são caracterizadas por um ambiente colaborativo e pela utilização de diversas ferramentas e plataformas tecnológicas, nomeadamente:
+
+        \begin{itemize}
+            \item \textbf{Microsoft Teams e ecosistema:} Utilizado para comunicação e colaboração entre a equipa e membros da Deloitte, facilitando a troca de informações e a coordenação. Muitas ferramentas associadas são também usadas como o calendário, chamadas ou o armazenamento de dados ou documentos;
+            \item \textbf{Outlook:} O cliente de e-mail usado, essencial para comunicações mais importantes ou que devem ser feitas a um certo número de indivíduos;
+            \item \textbf{Jira (Confluence):} O Jira, é utilizado para o acompanhamento de projetos, documentação e colaboração em tempo real, funciona em conjunto com o Confluence para organizar uma metodologia ágil Scrum na gestão do projeto;
+            \item \textbf{Ferramentas de desenvolvimento} e auxílio ao desenvolvimento como MongoDB, Azure, Oustystems e todo o seu ecossistema.
+        \end{itemize}
+
+        Cada trabalhador tem acesso ao seu próprio computador pessoal para o trabalho com altos padrões de segurança através de software e regras de uso como a proibição da instalação de qualquer software que não seja do próprio software center da Deloitte, ou a proibição de retirar de dados do computador, por métodos como USB's, garantindo assim uma forte segurança dos dados de trabalho.
+        
+        É aconselhada a ida da equipa ao escritório pelo menos uma vez por semana, conduzindo a uma interação mais forte entre a equipa e uma relação intergrupal mais saudável.
+        
+        Todas as equipas participam diariamente em reuniões Scrum de poucos minutos, dando assim a oportunidade de mais facilmente fazer atualizações de condições gerais (consulte secção \ref{subsec:scrum} para mais informações sobre este método). De seguida há reuniões diárias entre os membros de cada equipa, proporcionando a oportunidade de alinhar as tarefas do dia, discutir o que foi feito no dia anterior, tirar dúvidas, e discutir quaisquer outros tópicos relevantes para a equipa conjunta. 
+
+        % Mesmo antes da estrutura do relatorio, diz como será apresentadono no capitulo tal. 
+    
+    \subsection{Estrutura do Relatório}\label{subsec:estrutura-relatorio}
+
+        O relatório encontra-se organizado de acordo com os seguintes capítulos:
+
+    \begin{enumerate}
+        \item \textbf{Introdução:} Esta secção apresenta conceitos gerais relacionados ao projeto, destacando as implicações iniciais;
+        \item \textbf{Formações:} São analisadas as formações abordadas no estágio, delineando a preparação e aquisição de conhecimentos adquiridos;
+        \item \textbf{Conceitos Importantes:} Nesta secção, são discutidos os  conceitos essenciais no entendimento e compreensão do projeto;
+        \item \textbf{Organização do Projeto e Empresa:} Explora-se a estrutura organizacional dentro da Deloitte, explorando as diferentes dinâmicas de trabalho no contexto da empresa e do projeto trabalhado;
+        \item \textbf{Infraestrutura Tecnológica do RIL:} Analisa-se a infraestrutura tecnológica envolvida no projeto, fornecendo uma visão mais aprofundada das tecnologias utilizadas e das formas como se interligam;
+        \item \textbf{Ferramentas e Plataformas usadas no desenvolvimento da RIL:} Detalham-se as ferramentas e plataformas utilizadas durante o estágio, destacando as suas vantagens, desvantagens e como foram integradas no projeto e entre si;
+        \item \textbf{Tarefas no Âmbito do Projeto RIL:} Descrevem-se e pormenorizam-se as tarefas específicas trabalhadas, sublinhando-se o processo da sua resolução;
+        \item \textbf{Conclusão:} Nesta secção, são apresentadas as conclusões finais, destacando as principais aprendizagens e realizações do estágio.
+    \end{enumerate}
+
+    

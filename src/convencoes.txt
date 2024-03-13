@@ -1,0 +1,52 @@
+\begin{comment}
+
+    - Citations at the end of a sentence with the period after the citation like this\cite{bibid}.
+
+    - When making a reference to a figure or section, you should say Figure \ref*{label} or Section \ref*{label}, with the first letter capitalized.
+
+    - Use "—" instead of "-" when you are not using a hyphen between two words. (you can create it in latex with "---" or \textemdash too)
+
+    - In these bullet points, make the ":" be bold as well, and make the start of the phrase start with a capital letter:
+     \item \textbf{Platform as a Service (PaaS):} Em
+    
+    (according to priberam dictionary (https://dicionario.priberam.org/))
+    - Words that should not be italicized:
+        Software, Hardware, Design, Scrum, interface, backup, web, template, feedback, deployment(bc Im lazy), defects (lazy)
+    - Words that should:
+        sprints, stakeholders, low-code, underwriter, broker, roles, endorsement, Sign \& Close
+
+    - Words that are not translated to portuguese counterparts:
+        - "Defects" is not translated to "defeito" when referring to the defect in the Jira platform.
+    - Words that are translated to portuguese counterparts:
+        Download - Descarregar ; Upload - Carregar ; Queries - Pesquisa ; backup - cópia de segurança
+
+    - Masculine or feminine words?:
+        A OutSystems, A Jira, o MongoDB Atlas, o Confluence
+        
+    - Listas devem ter ; no fim, e o ultimo elemento deve ter um .
+
+    - Footnotes start with lowercase letter
+
+    - To-do:
+    Ver o termo: cloud/nuvem
+    
+
+    O que falta:
+        - Ou em cada uma das formações acrescento um paragrafo a dizer o numero de horas ou dias que se demorou na formação, ou uma tabela se preferir. E posso pôr um pequeno texto a dizer pontos fortes e fracos de cada formação (uma consideração minha)
+        - Adicionar table aosbre os defeitos que reportei
+    
+    Tenho que ter um grande e tenho que defender que fui um funcionario da organização.
+
+    Notas Filipe:
+    https://www.isec.pt/PT/instituto/servicos/sgap/#servFormularios
+    - Alterar a capa para a do ISEC: https://cloud.isec.pt/s/EFcdiiIwvAFZxVq
+    Agradecimentos: Meter endividado
+    - Revisão de português
+
+
+    todo:
+    Colocar os scripts python em anexo.
+
+    Info sobre horarios das formações para adicionar:
+
+\end{comment}

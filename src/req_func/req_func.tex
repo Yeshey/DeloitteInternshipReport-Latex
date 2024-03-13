@@ -1,0 +1,99 @@
+\section{Requisitos Funcionais dos Scripts de Python}\label{sec:Req_func_python_anexo}
+
+    \pagenumbering{arabic}% resets `page` counter to 1
+    \renewcommand*{\thepage}{C\arabic{page}}
+
+    \begin{table}[htbp] % htbp
+        \centering
+        \begin{tblr}{
+            % example for tblr: https://tex.stackexchange.com/questions/603349/tabularray-and-new-command-for-multicolumn-cells
+            % another example: https://tex.stackexchange.com/questions/605676/tabularray-how-to-control-the-vertical-alignment-of-the-cells-contents
+            hlines={lightgray}, vlines={lightgray},
+            width = \linewidth,% total width set to width available
+            %rows = {c,m}, % c/l/r aligns horizontally, m/t/b aligns vertically, aligns all rows
+            colspec={X[1,l,m] X[5,l,m]}, % the first number is the size % the second is c for center, l for left
+        }
+        % \textbf{Tempo trabalhado}
+            \textbf{ Nome } & \textbf{REQ-02 --- Análise de Utilizadores Inativos em GenerateMRCEmailProcess} \\
+            Resumo                  & Os utilizadores devem conseguir analisar processos \texttt{GenerateMRCEmailProcess} num ficheiro Excel, identificando e ignorando automaticamente no Service Center aqueles com utilizadores inativos na plataforma Atlas. \\
+
+            Descrição               & O sistema deve permitir a análise de processos \texttt{GenerateMRCEmailProcess} presentes num ficheiro Excel. Utilizando a plataforma Atlas, deve identificar os processos com utilizadores inativos e ignorá-los automaticamente na plataforma Service Center. \\
+
+            Requisitos Relacionados & -- \\
+
+        \end{tblr}
+        \caption{Requisito funcional \textit{Análise de Utilizadores Inativos em GenerateMRCEmailProcess}}
+        \label{tab:req2_py}
+    \end{table}
+
+    \begin{table}[htbp] % htbp
+        \centering
+        \begin{tblr}{
+            % example for tblr: https://tex.stackexchange.com/questions/603349/tabularray-and-new-command-for-multicolumn-cells
+            % another example: https://tex.stackexchange.com/questions/605676/tabularray-how-to-control-the-vertical-alignment-of-the-cells-contents
+            hlines={lightgray}, vlines={lightgray},
+            width = \linewidth,% total width set to width available
+            %rows = {c,m}, % c/l/r aligns horizontally, m/t/b aligns vertically, aligns all rows
+            colspec={X[1,l,m] X[5,l,m]}, % the first number is the size % the second is c for center, l for left
+        }
+        % \textbf{Tempo trabalhado}
+            \textbf{ Nome } & \textbf{REQ-04 --- Interrupção Controlada do Script} \\
+
+            Resumo                  & Os utilizadores devem conseguir interromper controladamente a execução do script em qualquer momento, utilizando a combinação de teclas CTRL + ALT + S. \\
+
+            Descrição               & O sistema deve possibilitar ao utilizador interromper a execução do script imediatamente em qualquer ponto, utilizando a combinação de teclas CTRL + ALT + S. \\
+
+            Requisitos Relacionados & -- \\
+
+        \end{tblr}
+        \caption{Requisito funcional \textit{Interrupção Controlada do Script}}
+        \label{tab:req4_py}
+    \end{table}
+
+    \begin{table}[htbp] % htbp
+        \centering
+        \begin{tblr}{
+            % example for tblr: https://tex.stackexchange.com/questions/603349/tabularray-and-new-command-for-multicolumn-cells
+            % another example: https://tex.stackexchange.com/questions/605676/tabularray-how-to-control-the-vertical-alignment-of-the-cells-contents
+            hlines={lightgray}, vlines={lightgray},
+            width = \linewidth,% total width set to width available
+            %rows = {c,m}, % c/l/r aligns horizontally, m/t/b aligns vertically, aligns all rows
+            colspec={X[1,l,m] X[5,l,m]}, % the first number is the size % the second is c for center, l for left
+        }
+        % \textbf{Tempo trabalhado}
+            \textbf{ Nome } & \textbf{REQ-03 --- Análise de Documentos em UploadDocuments\_V4} \\
+
+            Resumo                  & Os utilizadores devem conseguir analisar processos \texttt{UploadDocuments\_V4} num ficheiro Excel, verificando a existência de documentos associados ao "ContextId" na base de dados do MongoDB e registando informações no Excel. \\
+
+            Descrição               & O sistema deve permitir a análise dos processos \texttt{UploadDocuments\_V4} num ficheiro Excel. Deve verificar se o "ContextId" possui documentos na base de dados de Produção do MongoDB. Em caso negativo, deve assinalar no Excel a mensagem "Contract does not exist in Mongo" e prosseguir. Se existirem documentos com URIs, deve assinalar no Excel com o comentário "Document in Mongo". \\
+
+            Requisitos Relacionados & -- \\
+
+        \end{tblr}
+        \caption{Requisito funcional \textit{Análise de Documentos em UploadDocuments\_V4}}
+        \label{tab:req3_py}
+    \end{table}
+
+    \begin{table}[htbp] % htbp
+        \centering
+        \begin{tblr}{
+            % example for tblr: https://tex.stackexchange.com/questions/603349/tabularray-and-new-command-for-multicolumn-cells
+            % another example: https://tex.stackexchange.com/questions/605676/tabularray-how-to-control-the-vertical-alignment-of-the-cells-contents
+            hlines={lightgray}, vlines={lightgray},
+            width = \linewidth,% total width set to width available
+            %rows = {c,m}, % c/l/r aligns horizontally, m/t/b aligns vertically, aligns all rows
+            colspec={X[1,l,m] X[5,l,m]}, % the first number is the size % the second is c for center, l for left
+        }
+        % \textbf{Tempo trabalhado}
+            \textbf{ Nome } & \textbf{REQ-05 --- Pintar Colunas com Erros de Roxo para Análise Manual} \\
+
+            Resumo                  & Os utilizadores devem conseguir identificar visualmente colunas com erros, pintadas a roxo no Excel, para posterior análise manual. \\
+
+            Descrição               & O sistema deve pintar de roxo as colunas no Excel que apresentem erros, facilitando a identificação para análise manual. O script deve continuar a execução após esta identificação. \\
+
+            Requisitos Relacionados & REQ-01, REQ-02, REQ-03 \\
+
+        \end{tblr}
+        \caption{Requisito funcional \textit{Pintar Colunas com Erros de Roxo para Análise Manual}}
+        \label{tab:req5_py}
+    \end{table}

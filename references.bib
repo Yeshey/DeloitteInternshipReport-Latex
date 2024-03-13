@@ -1,0 +1,596 @@
+% To find publishing date of a website try this: (https://academia.stackexchange.com/questions/73612/citation-of-a-website-how-to-determine-the-year)
+% run this:
+% javascript:void((function(){var toRm=document.getElementById('showTagsWithDate');if(toRm){document.body.removeChild(toRm);return;}document.body.insertAdjacentHTML('afterbegin','<div id="showTagsWithDate" style="background-color:white;color:black;">Tags with a date in YYYY-[M]M-[D]D format; or in English (US, or non-US format):<ul/></div>');var myul=document.body.firstChild.lastChild;var tags=[];function addMoreDates(reg){var addTags=document.documentElement.innerHTML.match(reg);if(addTags){addTags.forEach(function(newTag){if((newTag.indexOf('<a ')===0)||(newTag.indexOf('<img '))===0){return;}if(tags.indexOf(newTag) === -1){tags.push(newTag);}});}}addMoreDates(/<[A-Z][^>]*\D(20\d\d|1\d\d\d)[\s\/\-.,]\s*([1-9]|0[1-9]|[1][012])[\s\/\-,.]\s*([1-9]|0[1-9]|[12]\d|3[01])\s*(st|nd|rd|th){0,1}\D[^>]*>/img);addMoreDates(/<[A-Z][^>]*\b([1-9]|0[1-9]|[12]\d|3[01])(st|nd|rd|th){0,1}[\/\-\s]\s*(january|february|march|april|may|june|july|august|september|october|november|december|jan|feb|mar|apr|may|jun|jul|aug|sep|sept|oct|nov|dec)[\s,.\/\-][\s,.\/\-]?\s*(20\d\d|1\d\d\d)\b[^>]*>/img);addMoreDates(/<[A-Z][^>]*\b(january|february|march|april|may|june|july|august|september|october|november|december|jan|feb|mar|apr|may|jun|jul|aug|sep|sept|oct|nov|dec)[\s,.\/\-][\s,.\/\-]?\s*([1-9]|0[1-9]|[12]\d|3[01])(st|nd|rd|th){0,1}[\s,.\-]+(20\d\d|1\d\d\d)\b[^>]*>/img);if(tags.length===0){tags=['No tags with dates.'];}tags.forEach(function(tag){myul.appendChild(document.createElement('LI')).appendChild(document.createTextNode(tag));});document.body.firstChild.appendChild(document.createElement('BR'));})())
+% if it fails you may find the earliest appearence of the site in: https://archive.org/
+% otherwise find the latest modification change or put the current year
+
+% To save an archive of the site you can use this:
+% javascript:void(window.open('https://web.archive.org/save/'+location.href))
+
+@online{iscac,
+    author = {ISCAC},
+    title = {Síntese Histórica, 100 anos de Ciências Empresariais.},
+    url = {http://www.iscac.pt/index.php?m=47_10&lang=PT},
+    urldate = {2023-10-23},
+    year = "2013",
+    note = {\url{https://web.archive.org/web/20231024164219/http://www.iscac.pt/index.php?m=47_10&lang=PT}}, % Archived Site
+}
+
+% Using http://wikipedia.ramselehof.de/wikiblame.php?
+% To see who wrote sections in wikipedia
+% in the href you need to add \ behind the %
+% online{wiki-isec,
+%    title = {Wikipedia User \href{https://pt.wikipedia.org/w/index.php?title=Usu\%C3\%A1rio(a):Gogolplexer&action=edit&redlink=1}{Gogolplexer}. Data de integração no Ensino Superior Politécnico.},
+%    url = {https://pt.wikipedia.org/wiki/Instituto_Superior_de_Engenharia_de_Coimbra},
+%    urldate = {2023-10-23}
+%}
+@online{wiki-isec,
+    author = {Wikipedia contributors},
+    title = {Data de integração no Ensino Superior Politécnico.},
+    url = {https://pt.wikipedia.org/wiki/Instituto_Superior_de_Engenharia_de_Coimbra},
+    urldate = {2023-10-23},
+    year = "2004",
+    note = {\url{https://web.archive.org/web/20231024173340/https://pt.wikipedia.org/wiki/Instituto_Superior_de_Engenharia_de_Coimbra}},
+}
+
+@online{decreto389/88,
+    author = {DRE},
+    title = {Decreto Lei º389/88 - Integra dos Institutos Superiores em Ensino Superior Politécnico.},
+    url = {https://dre.tretas.org/dre/2012/decreto-lei-389-88-de-25-de-outubro},
+    urldate = {2023-10-23},
+    year = "2016",
+    note = {\url{https://web.archive.org/web/20201115000000*/https://dre.tretas.org/dre/2012/decreto-lei-389-88-de-25-de-outubro}},
+}
+
+@online{universidade-coimbra,
+    author = {Universidade de Coimbra},
+    title = {Universidade mais antiga de Portugal.},
+    url = {https://www.uc.pt/sobrenos/historia/},
+    urldate = {2023-10-23},
+    year = "1997",
+    note   = {\url{https://web.archive.org/web/20231024175214/https://www.uc.pt/sobrenos/historia/}},
+}
+
+online{associacao,
+    title = {Wikipedia User \href{https://pt.wikipedia.org/wiki/Usu\%C3\%A1rio(a):Koenige}{Koenige}. Associacao de estudantes mais antiga de Portugal.},
+    url = {https://pt.wikipedia.org/wiki/Associa%C3%A7%C3%A3o_Acad%C3%A9mica_de_Coimbra.},
+    urldate = {2023-10-23}
+}
+@online{wiki-associacao,
+    author = {Universidade de Coimbra},
+    title = {Associacao de estudantes mais antiga de Portugal.},
+    url = {https://www.uc.pt/driic/rualarga/anteriores/19/19/print},
+    urldate = {2023-10-24},
+    year = "2023",
+    note = {\url{https://web.archive.org/web/20231024175846/https://www.uc.pt/driic/rualarga/anteriores/19/19/print}},
+}
+
+@online{deloitte-uk-history-yt,
+    author = {Deloitte UK},
+    title = {Historia da deloitte em 4 minutos.},
+    url = {https://www.youtube.com/watch?v=SyoLqUP6dX4},
+    urldate = {2023-10-24},
+    year = "2013",
+    note = {\url{https://web.archive.org/save/https://www.youtube.com/watch?v=SyoLqUP6dX4}},
+}
+
+@online{william-deloitte,
+    author = {Deloitte},
+    title = {William Welch Deloitte},
+    url = {https://www.deloitte.com/global/en/about/story/purpose-values/ties-that-bind.html},
+    urldate = {2023-10-24},
+    year = "2023",
+    note = {\url{https://web.archive.org/web/20231024180409/https://www.deloitte.com/global/en/about/story/purpose-values/ties-that-bind.html}},
+}
+
+@online{euronews-bigfour,
+    author = {Euro News},
+    title = {Big Four},
+    url = {https://www.euronews.com/2023/09/27/spain-fines-big-four-consulting-firms-for-marathon-working-days#:~:text=A%20year%20after%20the%20Spanish,at%20least%20%E2%82%AC1.4%20million.},
+    urldate = {2023-10-24},
+    year = "2023",
+    note = {\url{https://web.archive.org/web/20231024182741/https://www.euronews.com/2023/09/27/spain-fines-big-four-consulting-firms-for-marathon-working-days}},
+}
+
+@online{deloitte-stats,
+    author = {Deloitte},
+    title = {Deloitte US and our global network},
+    url = {https://www2.deloitte.com/us/en/pages/about-deloitte/articles/about-deloitte.html},
+    urldate = {2023-10-24},
+    year = "2014",
+    note = {\url{https://web.archive.org/web/20231024183128/https://www2.deloitte.com/us/en/pages/about-deloitte/articles/about-deloitte.html}},
+}
+
+@online{what-is-pl/sql,
+    author = {Oracle},
+    title = {PL/SQL for developers},
+    url = {https://www.oracle.com/database/technologies/appdev/plsql.html},
+    urldate = {2023-11-13},
+    year = "2019",
+    note = {\url{https://web.archive.org/web/20231113002710/https://www.oracle.com/database/technologies/appdev/plsql.html}},
+}
+
+@online{sql-language-reference,
+    author = {Oracle},
+    title = {SQL Language Reference},
+    url = {https://docs.oracle.com/en/database/oracle/oracle-database/19/sqlrf/SQL-Standards.html},
+    urldate = {2023-11-13},
+    year = "2020",
+    note = {\url{http://archive.today/WQwCV}},
+}
+
+@online{welcome-to-sql,
+    author = {khanacademy},
+    title = {Welcome to SQL},
+    url = {https://www.khanacademy.org/computing/computer-programming/sql/sql-basics/v/welcome-to-sql},
+    urldate = {2023-11-15},
+    year = "2014",
+    note = {\url{https://web.archive.org/web/20231115235836/https://www.khanacademy.org/computing/computer-programming/sql/sql-basics/v/welcome-to-sql}},
+}
+
+@online{sql-vs-mysql,
+    author = {Coursera},
+    title = {What is exactly SQL},
+    url = {https://www.coursera.org/articles/sql-vs-mysql},
+    urldate = {2023-11-15},
+    year = "2022",
+    note = {\url{https://web.archive.org/web/20231115235917/https://www.coursera.org/articles/sql-vs-mysql}},
+}
+
+@online{principios-agile-manifesto,
+    author = {Ward Cunningham},
+    title = {Principles behind the Agile Manifesto},
+    url = {https://agilemanifesto.org/principles.html},
+    urldate = {2023-11-19},
+    year = "2002",
+    note = {\url{https://web.archive.org/web/20231119215014/https://agilemanifesto.org/principles.html}},
+}
+
+@online{scrum,
+    author = {scrum.org},
+    title = {What is Scrum},
+    url = {https://www.scrum.org/resources/what-scrum-module},
+    urldate = {2023-11-19},
+    year = "2023",
+    note = {\url{https://web.archive.org/web/20231119225333/https://www.scrum.org/resources/what-scrum-module}},
+}
+
+@online{outsystems-components-and-tools,
+    author = {OutSystems Community},
+    title = {OutSystems Overview - Components and Tools},
+    url = {https://learn.outsystems.com/training/journeys/web-developer-662/components-and-tools/o11/1308},
+    urldate = {2023-11-20},
+    year = "2023",
+    note = {\url{}},
+}
+
+@online{about-the-OWASP-foundation,
+    author = {OWASP Foundation},
+    title = {About the OWASP Foundation},
+    url = {https://owasp.org/about/},
+    urldate = {2023-11-20},
+    year = "2023",
+    note = {\url{https://web.archive.org/web/20231120021515/https://owasp.org/about/}},
+}
+
+@online{OWASP-top-ten,
+    author = {OWASP Foundation},
+    title = {OWASP Top Ten},
+    url = {https://owasp.org/www-project-top-ten/},
+    urldate = {2023-11-20},
+    year = "2020",
+    note = {\url{https://web.archive.org/web/20231120023714/https://owasp.org/www-project-top-ten/}},
+}
+
+@online{what-is-mongodb,
+    author = {MongoDB},
+    title = {What is MongoDB},
+    url = {https://www.mongodb.com/what-is-mongodb},
+    urldate = {2023-11-20},
+    year = "2013",
+    note = {\url{https://web.archive.org/web/20231120025850/https://www.mongodb.com/what-is-mongodb}},
+}
+
+@online{cmmi,
+    author = {MongoDB},
+    title = {What is CMMI},
+    url = {https://www.cio.com/article/274530/process-improvement-capability-maturity-model-integration-cmmi-definition-and-solutions.html},
+    urldate = {2023-11-20},
+    year = "2021",
+    note = {\url{https://web.archive.org/web/20231120032958/https://www.cio.com/article/274530/process-improvement-capability-maturity-model-integration-cmmi-definition-and-solutions.html}},
+}
+
+@online{lloyds-and-the-great-fire-of-london-propertycasualty360,
+    author = {Propertycasualty360},
+    title = {Lloyd's and the Great Fire of London},
+    url = {https://www.propertycasualty360.com/2014/02/14/history-of-adjusting-part-3-lloyds-and-the-great-f/?slreturn=20231127192631},
+    urldate = {2023-12-28},
+    year = "2014",
+    note = {\url{https://web.archive.org/web/20231228022201/https://www.propertycasualty360.com/2014/02/14/history-of-adjusting-part-3-lloyds-and-the-great-f/?slreturn=20231127212158}},
+}
+
+@online{the-competitive-position-of-the-london-insurance-market,
+    author = {London Market Group},
+    title = {The competitive position of the London Insurance Market},
+    url = {https://lmg.london/wp-content/uploads/2019/07/London-Matters-CEO-Highlights-low-res.pdf},
+    urldate = {2023-12-28},
+    year = "2014",
+    note = {\url{https://web.archive.org/web/20231228022932/https://lmg.london/wp-content/uploads/2019/07/London-Matters-CEO-Highlights-low-res.pdf}},
+}
+
+@online{how-the-london-insurance-market-works,
+    author = {Five Minute Facts},
+    title = {How the London Insurance Market works},
+    url = {https://www.youtube.com/watch?v=e-sMZQB4XrQ},
+    urldate = {2023-12-28},
+    year = "2018"
+}
+
+@online{the-global-dimension-london-market,
+    author = {Insurance Information Institute},
+    title = {The London Insurance Market},
+    url = {https://www.iii.org/publications/commercial-insurance/the-global-dimension/london-market},
+    urldate = {2023-12-28},
+    year = "2015",
+    note = {\url{https://web.archive.org/web/20231228024445/https://www.iii.org/publications/commercial-insurance/the-global-dimension/london-market}},
+}
+
+@online{lloyd-titanic,
+    author = {Lloyd's},
+    title = {Lloyd's and the Titanic},
+    url = {https://www.lloyds.com/about-lloyds/history/catastophes-and-claims/titanic#:~:text=Back%20on%209%20January%2C%20broker,alone%20standing%20at%20%C2%A31m.},
+    urldate = {2023-12-29},
+    year = "2021",
+    note = {\url{https://web.archive.org/web/20231229153801/https://www.lloyds.com/about-lloyds/history/catastophes-and-claims/titanic}},
+}
+
+@online{rate-making,
+    author = {Britannica},
+    title = {Rate making},
+    url = {https://www.britannica.com/money/topic/insurance/Rate-making},
+    urldate = {2023-12-30},
+    year = "2021",
+    note = {\url{https://archive.org/details/rationing-definition-types-britannica}},
+}
+
+@online{titanic,
+    author = {The Tontine Coffee House},
+    title = {Rate making},
+    url = {https://tontinecoffeehouse.com/2022/09/26/insurance-and-the-titanic/},
+    urldate = {2023-12-30},
+    year = "2022",
+    note = {\url{https://web.archive.org/web/20231230194955/https://tontinecoffeehouse.com/2022/09/26/insurance-and-the-titanic/}},
+}
+
+@online{titanic2,
+    author = {The daily mail},
+    title = {5 milllion insurance policy document},
+    url = {https://www.dailymail.co.uk/news/article-2442450/5m-insurance-policy-document-Titanic-revealed-auctioneers.html},
+    urldate = {2023-12-30},
+    year = "2013",
+    note = {\url{https://web.archive.org/web/20231230194955/https://tontinecoffeehouse.com/2022/09/26/insurance-and-the-titanic/}},
+}
+
+@online{underwriting-insurance-loans-ipos-etc-explained-in-one-minute,
+    author = {One Minute Economics},
+    title = {Underwriting Explained in One Minute},
+    url = {https://www.youtube.com/watch?v=QmJObCXq_Hk},
+    urldate = {2023-12-30},
+    year = "2020",
+}
+
+@online{scale-up-scale-out,
+    author = {Microsoft},
+    title = {Scale up an app in Azure App Service},
+    url = {https://learn.microsoft.com/en-us/azure/app-service/manage-scale-up},
+    urldate = {2024-01-22},
+    year = "2022",
+    note = {\url{https://web.archive.org/web/20240122122746/https://learn.microsoft.com/en-us/azure/app-service/manage-scale-up}},
+}
+
+@online{outsystems-style-guide,
+    author = {Leonardo Fernandes},
+    title = {A code style guide for OutSystems},
+    url = {https://leonardo-monteiro-fernandes.medium.com/a-code-style-guide-for-outsystems-97a923084159},
+    urldate = {2024-01-22},
+    year = "2021",
+    note = {\url{https://web.archive.org/web/20240122222825/https://leonardo-monteiro-fernandes.medium.com/a-code-style-guide-for-outsystems-97a923084159}},
+}
+
+@online{outsystems-vs-mendix,
+    author = {Tanmay Sarkar},
+    title = {OustSystems vs Mendix},
+    url = {https://www.appsmith.com/blog/mendix-vs-outsystems},
+    urldate = {2024-01-25},
+    year = "2023",
+    note = {\url{https://web.archive.org/web/20240125154418/https://www.appsmith.com/blog/mendix-vs-outsystems}},
+}
+
+@online{os-vision,
+    author = {OutSystems},
+    title = {It began with a vision},
+    url = {https://www.outsystems.com/evaluation-guide/it-began-with-a-vision/},
+    urldate = {2024-01-25},
+    year = "2019",
+    note = {\url{https://web.archive.org/web/20240125154654/https://www.outsystems.com/evaluation-guide/it-began-with-a-vision/}},
+}
+
+@online{why-was-mendix-founded,
+    author = {Mendix},
+    title = {Why was Mendix Founded},
+    url = {https://www.mendix.com/evaluation-guide/why-founded/},
+    urldate = {2024-01-25},
+    year = "2021",
+    note = {\url{https://web.archive.org/web/20230216131432/https://www.mendix.com/evaluation-guide/why-founded/}},
+}
+
+@online{pega-ui,
+    author = {Pega},
+    title = {low code app development},
+    url = {https://www.pega.com/products/platform/low-code-app-development},
+    urldate = {2024-01-26},
+    year = "2021",
+    note = {\url{https://web.archive.org/web/20240126162659/https://www.pega.com/products/platform/low-code-app-development}},
+}
+
+@online{mendix-ui,
+    author = {Mendix Community},
+    title = {Create Your Own Design Systems in Mendix},
+    url = {https://www.youtube.com/watch?v=tt1n_yBeJrI},
+    urldate = {2024-01-26},
+    year = "2022",
+}
+
+@online{appian-ui,
+    author = {Appian Community},
+    title = {Build an Appian App in 4 Steps!},
+    url = {https://www.youtube.com/watch?v=7jiY6f4zulw},
+    urldate = {2024-01-26},
+    year = "2023",
+}
+
+@online{o-que-e-gestao-de-casos-pega,
+    author = {Pega},
+    title = {O que é gestão de casos?},
+    url = {https://www.pega.com/pt-br/case-management},
+    urldate = {2024-01-26},
+    year = "2023",
+    note = {\url{https://web.archive.org/web/20240126164524/https://www.pega.com/pt-br/case-management}},
+}
+
+@online{g-trends-low-code-platforms,
+    author = {Google},
+    title = {Google Trends on Low Code Platforms},
+    url = {https://trends.google.com/trends/explore?date=today%205-y&q=outsystems,Mendix,Appian,%2Fg%2F11k3224fkp,Budibase&hl=en-GB},
+    urldate = {2024-01-26},
+    year = "2006",
+}
+
+@online{appian-company-history,
+    author = {Zippia},
+    title = {Appian Company History Timeline},
+    url = {https://www.zippia.com/appian-careers-824/history/},
+    urldate = {2024-01-26},
+    year = "2022",
+    note = {\url{https://web.archive.org/web/20240126174717/https://www.zippia.com/appian-careers-824/history/}},
+}
+
+@online{appian-company-overview,
+    author = {Google},
+    title = {Google Trends on Low Code Platforms},
+    url = {https://www.greatplacetowork.com/certified-company/1100833#:~:text=Appian%20was%20founded%20on%20the,a%20low%2Dcode%20automation%20platform.},
+    urldate = {2024-01-26},
+    year = "2020",
+    note = {\url{https://web.archive.org/web/20240126174719/https://www.greatplacetowork.com/certified-company/1100833}},
+}
+
+@online{mendix-vs-outsystems-vs-appian,
+    author = {Impalaintech},
+    title = {Mendix vs. OutSystems vs. Appian – Best Low Code Platform?},
+    url = {https://impalaintech.com/blog/mendix-vs-outsystems-vs-appian/},
+    urldate = {2024-01-26},
+    year = "2023",
+    note = {\url{https://web.archive.org/web/20240126175800/https://impalaintech.com/blog/mendix-vs-outsystems-vs-appian/}},
+}
+
+@online{20-years-atlassian,
+    author = {Work Life Editorial Team},
+    title = {20 years of Atlassian, 20 lessons learned},
+    url = {https://www.atlassian.com/blog/announcements/atlassian-founders-20-years-20-lessons},
+    urldate = {2024-01-27},
+    year = "2022",
+    note = {\url{https://web.archive.org/web/20240128145535/https://www.atlassian.com/blog/announcements/atlassian-founders-20-years-20-lessons}},
+}
+
+@online{clickup-vs-jira,
+    author = {Alana Rudder},
+    title = {ClickUp Vs. Jira},
+    url = {},
+    urldate = {2024-01-28},
+    year = "2023",
+    note = {\url{https://web.archive.org/web/20240128180201/https://www.forbes.com/advisor/in/business/software/clickup-vs-jira/}},
+}
+
+@online{aws-vs-azure,
+    author = {ProkectPro},
+    title = {AWS vs Azure-Who is the big winner in the cloud war?},
+    url = {https://www.projectpro.io/article/aws-vs-azure-who-is-the-big-winner-in-the-cloud-war/401},
+    urldate = {2024-01-28},
+    year = "2021",
+    note = {\url{https://web.archive.org/web/20240128191143/https://www.projectpro.io/article/aws-vs-azure-who-is-the-big-winner-in-the-cloud-war/401}},
+}
+
+@online{launch-orcale-cloud,
+    author = {Oracle},
+    title = {Oracle Cloud Infrastructure Platform Overview},
+    url = {https://www.oracle.com/a/ocom/docs/cloud/oracle-cloud-infrastructure-platform-overview-wp.pdf},
+    urldate = {2024-01-28},
+    year = "2021",
+    note = {\url{https://web.archive.org/web/20240128192053/https://www.oracle.com/a/ocom/docs/cloud/oracle-cloud-infrastructure-platform-overview-wp.pdf}},
+}
+
+@online{marketshare-oracle-cloud,
+    author = {6sense},
+    title = {Market Share of Oracle Cloud Infrastructure},
+    url = {https://6sense.com/tech/infrastructure-as-a-service/oracle-cloud-infrastructure-market-share},
+    urldate = {2024-01-28},
+    year = "2023",
+}
+
+@online{cosmosdb-vs-mongodb,
+    author = {Senthil },
+    title = {Azure Cosmos DB vs. MongoDB: Which Database is Right for You?},
+    url = {https://www.whizlabs.com/blog/azure-cosmos-db-vs-mongodb/#:~:text=Choosing%20between%20Cosmos%20DB%20and,low%20latency%20and%20high%20availability.},
+    urldate = {2024-01-28},
+    year = "2023",
+    note = {\url{https://web.archive.org/web/20240128203044/https://www.whizlabs.com/blog/azure-cosmos-db-vs-mongodb/}},
+}
+
+@online{peer-programming,
+    author = {Erivan de Sena Ramos},
+    title = {Peer programming},
+    url = {https://medium.com/swlh/peer-programming-positive-and-negative-perceptions-c03141c74ea0},
+    urldate = {2024-02-05},
+    year = "2019",
+    note = {\url{https://web.archive.org/web/20240205211546/https://medium.com/swlh/peer-programming-positive-and-negative-perceptions-c03141c74ea0}},
+}
+
+@online{os-blocks,
+    author = {OutSystems Community},
+    title = {OutSystems Blocks},
+    url = {https://learn.outsystems.com/training/journeys/blocks-and-events-635/blocks/odc/57},
+    urldate = {2024-02-06},
+    year = "2023",
+}
+
+@online{os-block-events,
+    author = {OutSystems Community},
+    title = {OutSystems Blocks},
+    url = {https://learn.outsystems.com/training/journeys/blocks-and-events-635/block-events/o11/78},
+    urldate = {2024-02-06},
+    year = "2023",
+}
+
+@article{faja2014evaluating,
+  author = {Faja, Silvana},
+  title = {Evaluating Effectiveness of Pair Programming as a Teaching Tool in Programming Courses},
+  journal = {Information Systems Education Journal (ISEDJ)},
+  volume = {12},
+  number = {6},
+  pages = {36--45},
+  mmonth = {Nov},
+  year = {2014},
+  issn = {1545-679X},
+  url = {https://files.eric.ed.gov/fulltext/EJ1140923.pdf}  % Please replace "insert-your-url-here" with the actual URL.
+}
+
+@article{hannay2009effectiveness,
+  author = {Hannay, Jo E. and Dybå, Tore and Arisholm, Erik and Sjøberg, Dag I.K.},
+  title = {The effectiveness of pair programming: A meta-analysis},
+  journal = {Information and Software Technology},
+  volume = {51},
+  number = {12},
+  pages = {1110--1122},
+  year = {2009},
+  issn = {0950-5849},
+  doi = {10.1016/j.infsof.2009.02.001},
+  url = {https://www.researchgate.net/publication/222408325_The_effectiveness_of_pair_programming_A_meta-analysis},
+}
+
+@online{state-of-lowcode-outsystems,
+    author = {OutSystems},
+    title = {The State of Application Development: Is IT Ready for Disruption?},
+    url = {https://www.outsystems.com/-/media/E0A6E7121AAD4A4C975828265B3639ED.ashx?mkt_tok=eyJpIjoiT1RsbU56azNNakJsWVRaaiIsInQiOiIyNlBCdGlrRnVHclVEY2c3TWtSSEUwNWtTU3FBVVE0M2gwK0xoSW0xaktSZ3dWS2t6amQxOFU2WlFCRllwR256aUhMTHVWa0ROSnZrU2tRUlZ4cTV5RFJXb2o5Wlphc21jaFR4bXY4ZmU3U3BrTkFNMm1BZm9MWkNsRHg0YjlzayJ9},
+    urldate = {2024-03-09},
+    year = "2019",
+    note = {\url{https://web.archive.org/web/20240309153553/https://www.outsystems.com/-/media/E0A6E7121AAD4A4C975828265B3639ED.ashx?mkt_tok=eyJpIjoiT1RsbU56azNNakJsWVRaaiIsInQiOiIyNlBCdGlrRnVHclVEY2c3TWtSSEUwNWtTU3FBVVE0M2gwK0xoSW0xaktSZ3dWS2t6amQxOFU2WlFCRllwR256aUhMTHVWa0ROSnZrU2tRUlZ4cTV5RFJXb2o5Wlphc21jaFR4bXY4ZmU3U3BrTkFNMm1BZm9MWkNsRHg0YjlzayJ9}},
+}
+
+@article{rokis2023exploring,
+  title = {Exploring Low-Code Development: A Comprehensive Literature Review},
+  author = {Karlis Rokis and Marite Kirikova},
+  journal = {Complex Systems Informatics and Modeling Quarterly},
+  year = {2023},    
+  volume = {36},
+  number = {200},
+  pages = {68--86},
+  url = {https://www.researchgate.net/publication/375218739_Exploring_Low-Code_Development_A_Comprehensive_Literature_Review},
+  doi = {10.7250/csimq.2023-36.04},
+  issn = {2255-9922},
+  eissn = {2255-9922},
+}
+
+@article{yan2021impacts,
+  title = {The Impacts of Low/No-Code Development on Digital Transformation and Software Development},
+  author = {Zhaohang Yan},
+  year = {2021},
+  url = {https://www.researchgate.net/publication/357417399_The_Impacts_of_LowNo-Code_Development_on_Digital_Transformation_and_Software_Development},
+}
+
+@article{alamin2021empirical,
+    author = {M. A. Al Alamin and S. Malakar and G. Uddin and S. Afroz and T. Bin Haider and A. Iqbal},
+    title = {An Empirical Study of Developer Discussions on Low-Code Software Development Challenges},
+    booktitle = {Proceedings - 2021 IEEE/ACM 18th International Conference on Mining Software Repositories, MSR 2021},
+    year = {2021},
+    month = {5},
+    pages = {46--57},
+    publisher = {Institute of Electrical and Electronics Engineers Inc.},
+    doi = {10.1109/MSR52588.2021.00018},
+    url = {https://doi.org/10.1109/MSR52588.2021.00018}
+}
+
+@article{bock2021lowcode,
+  author = {Bock, A. C. and Frank, U.},
+  title = {Low-Code Platform},
+  journal = {Business and Information Systems Engineering},
+  volume = {63},
+  number = {6},
+  pages = {733--740},
+  month = dec,
+  year = {2021},
+  doi = {10.1007/s12599-021-00726-8},
+  url = {https://doi.org/10.1007/s12599-021-00726-8},
+}
+
+@article{sanchis2020lowcode,
+  author = {Sanchis, R. and García-Perales, Ó. and Fraile, F. and Poler, R.},
+  title = {Low-Code as Enabler of Digital Transformation in Manufacturing Industry},
+  journal = {Applied Sciences (Switzerland)},
+  volume = {10},
+  number = {1},
+  month = jan,
+  year = {2020},
+  doi = {10.3390/app10010012},
+  url = {https://doi.org/10.3390/app10010012},
+}
+
+@article{bucaioni2022modelling,
+  author = {Bucaioni, A. and Cicchetti, A. and Ciccozzi, F.},
+  title = {Modelling in Low-Code Development: A Multi-vocal Systematic Review},
+  journal = {Softw Syst Model},
+  year = {2022},
+  doi = {10.1007/s10270-021-00964-0},
+  url = {https://doi.org/10.1007/s10270-021-00964-0},
+}
+
+@article{diruscio2022lowcode,
+  author = {Di Ruscio, D. and Kolovos, D. and de Lara, J. and Pierantonio, A. and Tisi, M. and Wimmer, M.},
+  title = {Low-Code Development and Model-Driven Engineering: Two Sides of the Same Coin?},
+  journal = {Softw Syst Model},
+  volume = {21},
+  number = {2},
+  pages = {437--446},
+  month = apr,
+  year = {2022},
+  doi = {10.1007/s10270-021-00970-2},
+  url = {https://doi.org/10.1007/s10270-021-00970-2},
+}
+
+@online{deloitte_in_2023,
+    author = {Deloitte},
+    title = {Deloitte reports record FY2023 revenue},
+    url = {https://www.deloitte.com/global/en/about/press-room/global-revenue-announcement.html},
+    urldate = {2024-03-24},
+    year = "2022",
+    note = {\url{https://web.archive.org/web/20240312074201/https://www.deloitte.com/global/en/about/press-room/global-revenue-announcement.html}},
+}

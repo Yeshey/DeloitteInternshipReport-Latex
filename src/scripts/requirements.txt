@@ -1,0 +1,9 @@
+json
+pyautogui
+pyperclip
+selenium
+beautifulsoup4
+pandas
+openpyxl
+keyboard
+toml

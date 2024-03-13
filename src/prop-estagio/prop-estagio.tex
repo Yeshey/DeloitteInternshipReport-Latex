@@ -1,0 +1,33 @@
+\section{Proposta de Estágio}\label{sec:prop-estagio}
+
+    % https://stackoverflow.com/questions/2034766/when-using-pdfpages-in-latex-how-to-avoid-page-breaks-before-the-first-page
+
+    \pagenumbering{arabic}% resets `page` counter to 1
+    \renewcommand*{\thepage}{A\arabic{page}}
+
+    %\begin{figure}[!h]
+    %    \centering
+    %    \includegraphics[page=1, scale=0.8]{./imgs/Proposta_Estágio_João_Almeida.pdf}
+    %\end{figure}
+
+%    \makebox[\textwidth][l]{\includegraphics[width=1\textwidth]{./imgs/Proposta_Estágio_João_Almeida.pdf}}
+
+% todo UNCOMMENT THIS IN THE END!!!
+%\begin{comment}
+    
+    %\begin{figure}[H]
+    %    \centering
+    %    \includegraphics[page=1, scale=0.73]{./imgs/Proposta_Estágio_João_Almeida.pdf}
+    %\end{figure}
+
+    \begin{center}
+        \centering{\includegraphics[page=1,scale=0.724]{./imgs/Proposta_Estágio_João_Almeida.pdf}}
+
+        \includepdf[scale=0.9,pages=2-,pagecommand={}]{./imgs/Proposta_Estágio_João_Almeida.pdf}
+    \end{center}
+%\end{comment}
+
+%\includepdf[pages=-,
+%  pagecommand={},% removed the default \thispagestyle{empty}
+%]{./imgs/Proposta_Estágio_João_Almeida.pdf}
+

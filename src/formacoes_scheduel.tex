@@ -1,0 +1,55 @@
+\section{Mapa de Gantt das Formações do Estágio}\label{anexo_formacoes}
+
+\pagenumbering{arabic}% resets `page` counter to 1
+\renewcommand*{\thepage}{B\arabic{page}}
+
+\begin{figure}[htbp]
+    \centering
+
+    \def\pgfcalendarweekdayletter#1{%
+      \ifcase#1\tiny{M}\or \tiny{T}\or \tiny{W}\or \tiny{T}\or \tiny{F}\or \tiny{S}\or \tiny{S}\fi%
+    }
+
+    % https://texdoc.org/serve/pgfgantt/0
+    % https://tex.stackexchange.com/questions/473597/gantt-chart-looks-squished-because-small-time-slot-unit
+    % https://tex.stackexchange.com/questions/570631/gantt-chart-bar-label-spacing-issues
+    
+    % hgrid,
+    % vgrid,
+    % x unit=2mm,
+    % time slot format=isodate,
+    % time slot unit=day,
+    % calendar week text={\tiny{W\currentweek{}}}
+
+    \begin{ganttchart}[
+        hgrid,
+        vgrid,
+        x unit=2.1mm,
+        time slot format=isodate,
+        time slot unit=day,
+        calendar week text={\tiny{W\currentweek{}}},
+        bar label node/.style={text width=2.7cm,
+          align=right,
+          anchor=east,
+          font=\footnotesize\raggedleft}
+    ]{2023-09-19}{2023-11-13}
+        \gantttitlecalendar{year, month=shortname, week, weekday=letter} \\
+        % Activities
+        \ganttbar[bar/.append style={fill=color1, opacity=0.8}]{PL/SQL\ \ \ \ }{2023-09-18}{2023-09-20} \\
+        \ganttbar[bar/.append style={fill=color2, opacity=0.8}]{Java}{2023-09-20}{2023-09-22} \\
+        \ganttbar[bar/.append style={fill=color3, opacity=0.8}]{Excel}{2023-09-25}{2023-09-26} \\
+        \ganttbar[bar/.append style={fill=color4, opacity=0.8}]{SQL e modelização}{2023-09-27}{2023-09-28} \\
+        \ganttbar[bar/.append style={fill=color1, opacity=0.8}]{Boas práticas de desenvolvimento}{2023-09-29}{2023-09-29} \\
+        \ganttbar[bar/.append style={fill=color2, opacity=0.8}]{Banca}{2023-10-02}{2023-10-02} \\
+        \ganttbar[bar/.append style={fill=color3, opacity=0.8}]{Seguros}{2023-10-02}{2023-10-02} \\
+        \ganttbar[bar/.append style={fill=color4, opacity=0.8}]{Agile/Scrum}{2023-10-03}{2023-10-03} \\
+        \ganttbar[bar/.append style={fill=color1, opacity=0.8}]{Getting Things Done}{2023-10-03}{2023-10-03} \\
+        \ganttbar[bar/.append style={fill=color2, opacity=0.8}]{CMMI}{2023-10-03}{2023-10-03} \\
+        \ganttbar[bar/.append style={fill=color3, opacity=0.8}]{Formação de testes}{2023-10-04}{2023-10-06} \\
+        \ganttbar[bar/.append style={fill=color4, opacity=0.8}]{OutSystems}{2023-10-09}{2023-10-20} \\
+        \ganttbar[bar/.append style={fill=color1, opacity=0.8}]{Azure}{2023-10-23}{2023-11-13} \\
+        %\ganttmilestone[fractional xshift=1/2]{Test}{2023-09-20}
+    \end{ganttchart}
+    
+    \caption{Mapa de Gantt das formações}\label{fig:tempoform}
+\end{figure}    
