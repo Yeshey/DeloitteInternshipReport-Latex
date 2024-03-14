@@ -6,9 +6,13 @@
 \linespread{1.15}
 
 % To compile only part
-\includeonly{src/formacoes_scheduel}
+% \includeonly{src/def_e_inc/def_e_inc}
 
 \begin{document}
+
+  \newgeometry{margin=1in}
+  \pagenumbering{roman}  % Set page numbering to Roman numerals for the front matter
+  \setcounter{secnumdepth}{0} % Sections don't have numbering in the frontmatter
 
   \input{src/cover/cover}
 
@@ -31,7 +35,7 @@
 
   \setcounter{secnumdepth}{4} % Sections have numbering again up to the subsubsub, paragraph section
 
-  \include{src/introducao/introducao}
+  \input{src/introducao/introducao}
 
   \include{src/formacoes/formacoes}
 
