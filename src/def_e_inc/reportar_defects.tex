@@ -1,0 +1,42 @@
+    \subsection{Reportar \textit{Defects}}\label{sub:reportar_defects}
+
+        Pode acontecer que através de testes, ou incidentes, ou mesmo apenas usando a plataforma, se depare com um erro ou comportamento inesperado, o qual pode ter que ser reportado como defeito. Circunstância esta que aconteceu ao presente estagiário quando conseguiu carregar dois documentos MRC para apenas um contrato, algo que não devia ser possível. 
+
+        Ocorria também, com alguma frequência, membros da equipa descobrirem defeitos durante o apoio a testes. Como parte do seu trabalho cabia-lhes, mediante solicitação,  
+        ajudar a documentá-los e a registá-los na plataforma Jira. Na Tabela \ref{tab:table_reported_defects} encontram-se listados todos os defeitos reportados durante percurso do estágio.
+
+        O processo de reportar defeitos é bastante intuitivo e envolve a criação de uma entrada no Jira, onde são fornecidos detalhes essenciais para a compreensão e resolução do problema. Este processo implica frequentemente a confirmação com membros da equipa sobre campos cruciais, como a versão principal, tipo de defeito, data de deteção, fase de teste, \textit{sprint}, versão afetada, severidade e prioridade.
+
+        Detalhes adicionais, como descrição, passos para reproduzir o defeito, se o utilizador fica ou não bloqueado, qual a solução alternativa, resultado esperado e resultado atual, são também incluídos no registo do defeito. Este nível de detalhe facilita a triagem, análise e resolução eficaz por parte da equipa de desenvolvimento futuramente.
+
+        \begin{table}[htbp] % htbp
+            \centering
+            \begin{tblr}{
+                % example for tblr: https://tex.stackexchange.com/questions/603349/tabularray-and-new-command-for-multicolumn-cells
+                % another example: https://tex.stackexchange.com/questions/605676/tabularray-how-to-control-the-vertical-alignment-of-the-cells-contents
+                hlines={lightgray}, vlines={lightgray},
+                width = \linewidth,% total width set to width available
+                %rows = {c,m}, % c aligns horizontally, m aligns vertically, aligns all rows
+                colspec={X[3,c,m] X[3,c,m] X[1,c,m] X[1,c,m]},
+            }
+            % \textbf{Tempo trabalhado}
+            \textbf{Título do \textit{defect}} & \textbf{\textit{Defect} em Português} & \textbf{Assigned by the end of the internship} & \textbf{Repórter} \\
+
+            PNG-89894 Copy Panel Button Appears for a moment in the wrong context & Botão \textit{Copy Panel} Aparece por um Momento no Contexto Errado & Assigned & João Filipe Silva de Almeida \\
+            PNG-88375 Unable to Replace Contract Endorsement document & Não é Possível Substituir o Documento do \textit{Endorsement} do Contrato & Unassigned & João Filipe Silva de Almeida \\
+            PNG-88371 INC0067421, INC0067542 --- Adding multiple contract documents to a contract & Possível Adicionar vários Documentos a um Contrato & Assigned & João Filipe Silva de Almeida \\
+            PNG-88069 INC0065686-UW able to accept withdrawn request & UW Capaz de Aceitar Pedidos \textit{Withdrawn} & Unassigned & João Filipe Silva de Almeida \\
+            PNG-87070 PROD --- "Mark as backloaded" option in contracts shouldn't appear in Archived Placements. & Opção "Mark as backloaded" em Contratos não Deve Aparecer nas Colocações Arquivadas & Assigned & João Filipe Silva de Almeida \\
+            PNG-87058 INC0063053, INC0065981 --- Endorsement showing "not Responded" & \textit{Endorsement} Mostrando "Não Respondido" & Unassigned & João Filipe Silva de Almeida \\
+            PNG-83536 INC0062203, INC0067349, INC0068073, INC0069140, INC0071112 --- UW Reference changes by UW aren't inherited by contract endorsements & Alterações nas Referência feitas por um UW não são Herdadas por \textit{Endorsements} do Contratos & Assigned & João Filipe Silva de Almeida \\
+            PNG-83098 INC0064504 --- Regression(Prod) --- status withdraw blinks in overview tab in broker & Regressão (Produção) --- \textit{Withdrawn} Status Pisca na aba \textit{Overview} com o \textit{Broker} & Assigned & João Filipe Silva de Almeida \\
+
+            \end{tblr}
+            \caption{Defeitos Reportados}
+            \label{tab:table_reported_defects}
+            \source{Documentação Interna} % 1- https://impalaintech.com/blog/mendix-vs-outsystems-vs-appian/
+        \end{table}
+
+        % tipo o de adicionar vários contratos a um documento: 
+
+        % Podes filtrar no Jira por reported by me

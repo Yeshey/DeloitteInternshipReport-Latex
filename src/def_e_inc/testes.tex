@@ -1,0 +1,24 @@
+    \subsection{Testes}\label{sub:tests}
+
+        Durante o período de estágio, as responsabilidades incluíam a realização de testes sempre que solicitado pela equipa. O processo de teste envolvia uma abordagem sistemática para garantir o funcionameninto e integridade adequados das funcionalidades desenvolvidas, e pode-se dividir nos seguintes passos:
+
+        \begin{itemize}
+            \item \textbf{Recebimento das Solicitações de Teste:} Ao ser solicitado, forma-se uma compreensão dos requisitos e casos a testar. Como por exemplo a identificação do ambiente a testar, e recolha de quaisquer documentos que possam ser necessários;
+            \item \textbf{Recriação das condições do Teste:} Criação das condições na plataforma para recriar o teste com base nas especificações fornecidas;
+            \item \textbf{Execução de Testes:} Interação com a aplicação, seguindo as especificações do teste, recolhendo evidências videográficas se necessário;
+            \item \textbf{Registo de Resultados:} Documentação dos resultados, por exemplo, no defeito em causa, incluindo comportamentos inesperados e evidências;
+            \item \textbf{Comunicação com a Equipa:} Segue-se o relato conciso dos resultados obtidos com quem os solicitou.
+        \end{itemize}
+
+        A principal destreza necessária para realizar estes testes é uma boa perceção da lógica de negócio e da plataforma. Os seguintes são alguns exemplos de testes feitos durante a duração do estágio:
+
+        \begin{itemize}
+            % Um da bárbara sobre a proposed line não ser revertida
+            \item Criação de um contrato com duas secções, ambas com uma mistura de UWs off e on platform e uma mistura de \textit{roles} entre eles, mandar e aceitar o contrato, fazer uma \textit{correction} do tipo ``panel change'' e alterar a percentagem proposta por cada UW sem \textit{roles} de 60\% para 50\%. Aceitá-las na \textit{section} 1 e rejeitá-las na \textit{section} 2. Na \textit{section} rejeitada, deveria voltar a 50\% | 50\% proposed, em vez de 50\% | 60\%. O comportamento esperado foi o observado pelo que não se replicou;
+            % Outro da Bárbara(e agora que tens que ver o codigo) sobre os archive placements
+            \item Carregar \textit{placements} arquivados a partir de uma folha Excel onde o \textit{placing broker} especificado pertencia a uma organização com duas companhias diferentes onde ambas tinham \textit{branches} com nomes idênticos. Isto fazia com que ao ir buscar o utilizador do Excel, este pudesse ser extraído do \textit{branch} errado, resultando no bloqueio do utilizador devido à plataforma considerar estes dados inválidos;
+            % Um teste sobre Receber notificações: on cancelation
+            \item Criar uma \textit{declaration} com um \textit{leader} e um \textit{follower}, nenhum dos UWs têm \textit{roles}, enviar e aceitar, selecionar ``cancel line'' na declaration e enviar. Notar que o \textit{follower} não recebeu notificação da \textit{cancelation};
+            % Podes falar dos testes que a Inês te deu, por exemplo o dos endorsements
+            \item O preenchimento de uma folha de Excel acerca da informação presente no documento gerado pelos contratos e \textit{endorsements} dos contratos numa variedade de casos diferentes com UWs off e on platform.
+        \end{itemize}

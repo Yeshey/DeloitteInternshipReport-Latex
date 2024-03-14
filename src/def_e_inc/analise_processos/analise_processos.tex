@@ -1,0 +1,66 @@
+    \subsection{Análise de Processos}\label{sub:processos}
+
+        Uma das tarefas delegadas ao presente estagiário foi também a análise de processos de OS. Dentro do Service center é possível analisar nas abas ``Monitoring'' e ``Processes'' os processos da aplicação e como é que estes foram concluídos ou em que estado estão, na Figura \ref{fig:interface_processo_servicecenter} pode-se ver a interface da plataforma ao visualizar os detalhes de um processo.
+
+        Os processos aqui analisados são processos que acabavam suspensos, muitas vezes bastante antigos. São processos que causariam problemas a utilizadores se estes interagissem com o contrato específico associado a este processo, frequentemente podiam ser recomeçados e continuariam normalmente, mas em muitas das situações isto não acontece, esta situação oferece a possibilidade de identificar problemas com a plataforma e possíveis erros a resolver.
+
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=\textwidth]{imgs/ProcessoServiceCenter.png}
+            \caption{Interface de análise de um processo - Service Center}\label{fig:interface_processo_servicecenter}
+            \source{Service Center Interno}
+        \end{figure}
+
+        Todos os processos revistos, independentemente do seu estado, tinham que ser anotados num documento de Excel específico para a tarefa com informação dos IDs dos contratos, \textit{placements}, equipas e utilizadores associados ao processo, bem como os erros ocorridos, caso tal seja relevante.
+
+        Devido à natureza frequentemente repetitiva da análise destes, foi elaborado um web scraper em python que auxiliou na análise de alguns processos, por exemplo, foi automatizado o caso em que o processo \texttt{GenerateMRCEmailProcess} estava associado a um utilizador que estivesse inativo, registando e clicando ``skip'' na plataforma automaticamente, para mais informações refira à Secção \ref{secsec:scriptspython}.
+
+        Existem três tipos de processos que geravam erros e era preciso analisar:
+
+        \subsubsection{\texttt{SDC\_Generation}}\label{secsec:sdc_generation}
+
+            % Isto é por causa da equipa de SDC para não sobrecarregarem
+
+            Possivelmente o mais difícil de se analisar dos processos aqui representados.
+
+            Foi imposto um limite de dez processos por hora e cinquenta por dia dos recomeçados com sucesso, de forma a não sobrecarregar a equipa dos processos.
+
+            OS erros levantados neles tinham origem nos stamps das negociações e das suas complexidades. Devido à sua natureza volátil, e a criarem \textit{roles} diferentes para utilizadores e terem uma lógica de pertença a utilizadores e organizações pouco intuitiva, a sua ocorrência dependia de várias contingências.
+
+            Em cada processo analisado era necessário encontrar a negociação e os stamps associados e fazer uma análise do campo \texttt{sdc\_enable} de cada stamp. Caso houvesse pelo menos um com a valor lógico verdadeiro para este campo, tentava-se correr de novo o processo, caso contrário, registava-se e não se tentava correr.
+            
+            Os processos podiam acabar numa das seguintes formas:
+            \begin{itemize}
+                \item \textbf{Closed}: Quando o processo correu de novo e concluiu com sucesso;
+                \item \textbf{Error}: Quando acontecia um erro na execução, o erro era extraído e registado atempadamente;
+                \item \textbf{Active --- Loop}: Quando fica num estado cíclico, por vezes durante horas. Na maior parte destes casos os processos acabariam por ficar suspensos de novo.
+            \end{itemize}
+
+        \subsubsection{\texttt{GenerateMRCEmailProcess}}\label{secsec:generate_mrc_email_process}
+
+            Os processos \texttt{GenerateMRCEmailProcess} envolvidos na geração dos documentos MRC (\textit{Mutual Responsibility Contract}). O erro mais recorrente neste processo era identificado pela mensagem ``There was a technical issue sending the notification to the user <ID>''. Após uma análise detalhada do fluxo de ações nos logs do Azure, identificou-se que este problema ocorre quando uma ação tenta aceder a um documento na base de dados que não tem o campo URI preenchido, indicando a falta da referência ao documento na plataforma Nuxeo. A solução recomendada, caso um utilizador se depare e reporte o problema, é solicitar ao utilizador que execute a ação ``cancel and replace''.
+
+            Outro erro detetado seria o identificado pela mensagem ``Invalid Username and password''. Neste caso, era feita uma validação para verificar se o utilizador estava inativo na base de dados. Se estivesse, era pressionado o botão ``skip'' no processo, pois não havia ações adicionais a serem tomadas. Caso o utilizador estivesse ativo, a informação era anotada e o estado atual era mantido. Eventualmente, poder-se-ia verificar nos logs do Azure as ações executadas até ocorrer o erro para identificar a ação que o causou.
+
+            % Erro mais comum: There was a technical issue sending the notification to the user <ID>
+            % Depois de revisto o fluxo de ações chamadas nos logs do azure, foi possível perceber que o erro ocorre quando uma ação chama um documento que na base de dados não tem o uri preenchido, ou seja não tem referenncia ao documneto.
+            %A solução se um user se queixar seria pedir são utilizador para fazer cancel and replace.
+
+            % Tinham outro erro: Invalid Username and password, e aqui é que faziamos a validação de se o user está inativo ou não: ver na Base de dados o utilizador, Se estiverem Inativos, ent davamos skip, não há nada a fazer, dar skip, Caso se encontre um ativo anota-se e deixa-se como está (ou eventualmente ver no azure os logs das ações percorridas até dar o erro).
+
+        \subsubsection{\texttt{UploadDocuments\_V4}}\label{secsec:uploaddocuments_v4}
+
+            O processo \texttt{UploadDocuments\_V4} desempenha um papel na gestão de documentos da plataforma, é na sequência de uma asserção da integridade destes documentos na plataforma, que surgiu a necessidade de fazer a análise destes processos. 
+            
+            O principal objetivo é validar se um documento está presente no Nuxeo e na base de dados do OutSystems em sincronia, utilizando o identificador do documento.
+
+            O procedimento envolve a consulta à base de dados MongoDB para verificar se o campo URI do documento está preenchido, indicando a existência do documento no Nuxeo, e confirmando na plataforma. Se o documento estiver presente, prosseguia-se com o botão ``skip''. Caso contrário, se não existir informação na base de dados MongoDB, a situação seria registada. Nos casos em que o contrato associado ao documento também não é encontrado, a ação ``skip'' seria considerada. É relevante notar que durante a duração relevante, não foi registado nenhum cenário onde o contrato existia num \textit{placement} mesmo sem ter um URI.
+
+            % O objetivo seria ver se o documento está presente no Nuxeo e em OutSystems
+            % Viamos na base de dados o documento atravez do ID
+            % Queremos ver se o campo uri está preenchido com qualquer coisa, que se tiver quer dizer que existe no Nuxeo. Mas para confirmar podiamos ir mesmo ao Nuxeo: Copiavas o Uri e punhas no nuxio e deve aparecer
+            % Se aparecer, podes clicar no skip:
+            % Se não aparecer nada na base de dados MongoDB, Anotavam no Excel e não lhe mexíamos. Mas antes disso, procuravas o contrato, se o contrato não existisse também, aí podiam dar skip: 
+            % O caso em que o contrato existe nunca foi encontrado antes!
+
+        \input{src/def_e_inc/analise_processos/scripts_python.tex}

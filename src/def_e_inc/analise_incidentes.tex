@@ -1,0 +1,78 @@
+    \subsection{Análise de Incidentes}\label{sub:incidentes}
+
+        Incidentes, ao contrário de \textit{defects}, têm uma certa urgência associada, devido a serem um problema reportado diretamente por um utilizador, havendo, normalmente, alguém à espera que este seja resolvido. Pelo que se recorre muito mais a \textit{datafixes} para desbloquear utilizadores e nem sempre é possível ou viável chegar à causa, ou raiz dos problemas.
+
+        % ``O meu primeiro Incident'' No onenote INC0063053
+
+        \subsubsection{INC0064225 - Todas as seleções são inválidas}\label{secsec:inc0064225} % INC0064225 com o marcio
+
+            Incidente original: ``\textit{All selections invalid}''
+
+            % OMG INCIDENTE INC0064225, aquele que fizeste datafix com o marcio
+
+            \begin{table}[H] % htbp
+                \centering
+                \begin{tabularx}{1\textwidth}{|>{\raggedright\arraybackslash}X|}
+                    \hline
+                    \rowcolor{lightgray}
+                    \textbf{Incidente INC0064225} \\
+                    \hline
+                    \rowcolor{lightgray!20}
+                
+                    \textbf{Descrição do Incidente:} O utilizador ficou bloqueado ao submeter uma nova Firm Order. Depois de fazer o processo todo de submissão como esperado, aparecia o erro ``All selections are invalid, Please review the breakdown below and select Cancel to return to the Submission Pack'', apresentando por baixo uma lista com todos os UWs a dizer estarem inativos.
+
+                    \\
+                    \hline
+                \end{tabularx}
+                \caption{Incidente INC0064225}\label{table:usincINC0064225}
+                \source{Resumo da Informação do Incidente no Service Now}
+            \end{table}
+
+            A descrição do incidente encontra-se na Tabela \ref{table:usincINC0064225}.
+
+            Durante a investigação, verificou-se um possível equívoco no número fornecido pelo utilizador ``NM0011234'', que se presumiu que deveria ser ``NM0011224''. 
+
+            Identificou-se inicialmente a possibilidade de resolver o problema removendo e adicionando novamente a \textit{Master Facility} à declaração. Esta abordagem foi sugerida ao utilizador, como uma solução potencial para o problema.
+            
+            Ao analisar as participações associadas à \textit{Facility}, notou-se ainda uma discrepância numa delas, relacionada com um utilizador chamado ``John''. Embora não pareça ser a causa direta do problema, esta discrepância foi registada para investigação adicional, caso a solução inicial não fosse bem-sucedida.
+
+            Foi então mandado o pedido ao utilizador para adicionar a MF de novo. Recebeu-se resposta negativa atempadamente, informando-nos que isto já fora tentado e não funcionara.
+            
+            No entanto, na base de dados era possível ver que a última mudança ao contrato fora há mais de uma semana atrás, foi decidido, portanto, fazer a \textit{datafix} para corrigir o utilizador ``John'' e marcar uma reunião com o utilizador. Devido ao tempo que o \textit{datafix} levou a ser aplicado, acabou por não se conseguir falar com o utilizador antes do final da semana. Mas mais tarde recebeu-se a notícia que o \textit{datafix} efetuado fora suficiente para desbloquear o utilizador e o incidente pôde ser fechado.
+            
+        \subsubsection{INC0065686 - Não foi possível enviar o cancelamento}\label{secsec:inc0065686} % INC0064225 com a ines
+                
+            Incidente original: ``\textit{Unable to submit cancelation}''
+
+            \begin{table}[H] % htbp
+                \centering
+                \begin{tabularx}{1\textwidth}{|>{\raggedright\arraybackslash}X|}
+                    \hline
+                    \rowcolor{lightgray}
+                    \textbf{Incidente INC0065686} \\
+                    \hline
+                    \rowcolor{lightgray!20}
+                
+                    \textbf{Descrição do Incidente:} O utilizador mandou uma Firm Order para um UW que não devia ter mandado, por isso clicou em ``withdraw'' do pedido, mas o UW conseguiu aceitar. Ao ver que o UW tinha aceite, foi mandado um pedido de cancelamento, mas o UW não conseguia visualizá-lo, e ao abrir a submissão deste pedido, o programa fica parado a carregar infinitamente.
+
+                    \\
+                    \hline
+                \end{tabularx}
+                \caption{Incidente INC0065686}\label{table:incINC0065686}
+                \source{Resumo da Informação do Incidente no Service Now}
+            \end{table}
+
+            A descrição do incidente encontra-se na Tabela \ref{table:incINC0065686}.
+
+            No decorrer da análise do incidente INC0065686, foi identificado o problema na base de dados. Existe uma sequência de documentos criados na DB de MongoDB que são criados quando o estado de um UW é mudado, estas são as negotiations. Depois de se comunicar com um membro da equipa familiarizado com o funcionamento desta coleção, apercebeu-se que depois da negotiation com o estado ``withdrawn'' foi gerada subsequentemente uma negotiation com o estado \texttt{pending\_unconditional\_line}, que significa que o pedido tinha sido enviado para o UW mesmo tendo sido withdrawn; se fosse um novo pedido e não o mesmo, teria que haver uma negotiation \texttt{request\_for\_line\_or\_binder} antes da \texttt{pending\_unconditional\_line}.
+
+            Não foi encontrada nenhuma indicação na Base de Dados do pedido de cancelamento descrito pelo utilizador.
+
+            Depois de alguma discussão decidiu-se que a solução seria fazer um ``soft delete'' das negociations depois do withdraw. Para manter a integridade da base de dados foi necessário também alterar a coleção das ``participations'', que continha informação àcerca do UW e da sua participação atual no contrato, tendo sido necessário remover cinco campos que tinham sido inadvertidamente adicionados devido às negotiations erróneas que foram criadas, e alterado o campo status da participation para ``new''.
+            
+            No fim foi criado um \textit{defect} com os passos para reproduzir que estavam por definir, onde se detalhou o problema: ``UW capaz de aceitar pedido withdrawn''.
+
+            % INC INC0065686 (aquele que viste com a inês e foi preciso mandar datafix para remover as negotiations)
+
+            % Incidente do Craveiro no onenote
+            %  aquele que falaste com o user com a andereia, e que o problema era os subpanels
