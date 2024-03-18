@@ -25,6 +25,8 @@
 
     - Footnotes start with lowercase letter
 
+    - Titulo das tabelas é suposto ficar em cima, e titulo das imagens é em baixo
+
     - To-do:
     Ver o termo: cloud/nuvem
     

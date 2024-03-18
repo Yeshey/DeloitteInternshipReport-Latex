@@ -1,6 +1,30 @@
     \subsection{Análise de Incidentes}\label{sub:incidentes}
 
-        Incidentes, ao contrário de \textit{defects}, têm uma certa urgência associada, devido a serem um problema reportado diretamente por um utilizador, havendo, normalmente, alguém à espera que este seja resolvido. Pelo que se recorre muito mais a \textit{datafixes} para desbloquear utilizadores e nem sempre é possível ou viável chegar à causa, ou raiz dos problemas.
+        Incidentes, ao contrário de \textit{defects}, têm uma certa urgência associada, devido a serem um problema reportado diretamente por um utilizador, havendo, normalmente, alguém à espera que este seja resolvido. Pelo que se recorre muito mais a \textit{datafixes} para desbloquear utilizadores e nem sempre é possível ou viável chegar à causa, ou raiz dos problemas. A Tabela \ref{tab:incidentes_trabalhados} apresenta uma lista com todos os incidentes trabalhados.
+
+        \begin{table}[htbp] % htbp
+            \centering
+            \begin{tblr}{
+                % example for tblr: https://tex.stackexchange.com/questions/603349/tabularray-and-new-command-for-multicolumn-cells
+                % another example: https://tex.stackexchange.com/questions/605676/tabularray-how-to-control-the-vertical-alignment-of-the-cells-contents
+                hlines={lightgray}, vlines={lightgray},
+                width = \linewidth,% total width set to width available
+                %rows = {c,m}, % c aligns horizontally, m aligns vertically, aligns all rows
+                colspec={X[1.4,c,m] X[1.4,c,m] X[3,c,m] X[0.9,c,m]},
+            }
+            % \textbf{Tempo trabalhado}
+            \textbf{Título do incidente} & \textbf{Incidente em Português} & \textbf{Descrição} & \textbf{Prioridade} \\
+
+            Endorsement showing ``not Responded'' & \textit{Endorsement} mostrando ``not Responded'' & \textit{Endorsement} enviado mostrava ``Not Responded'' apesar de ter sido respondido, a solução foi apagar e pedir ao utilizador para o recriar & Média \\
+            ``Unable to submit cancelation'' & Não foi possível enviar o cancelamento & Refira à Secção \ref{secsec:inc0065686} & Média \\
+            ``Cannot Assign Roles'' & Não é possível atribuir os \textit{roles} & O botão de ``Assign Roles'' não se encontrava visível. Através da chamada com uma colega e de uma chamada com o utilizador, percebemos que o problema era o botão ``Add subpanels'' na aba dos \textit{Underwriters} que estava ativo, e nesse estado, escondia o botão ``Assign Roles'' & Média \\
+            ``error NM0011234 to lineslip FNM0003923 --- All selections invalid'' & erro NM0011234 para \textit{lineslip} FNM0003923 --- Todas as seleções são inválidas & Refira à Secção \ref{secsec:inc0064225} & Média \\
+
+            \end{tblr}
+            \caption{Incidentes Trabalhados}
+            \label{tab:incidentes_trabalhados}
+            \source{Documentação Interna} % 1- https://impalaintech.com/blog/mendix-vs-outsystems-vs-appian/
+        \end{table}
 
         % ``O meu primeiro Incident'' No onenote INC0063053
 
