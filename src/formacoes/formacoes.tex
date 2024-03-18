@@ -99,6 +99,8 @@
 
       \renewcommand{\arraystretch}{1.5}
       \begin{table}[htbp] % here top bottom page(a page just with images), ! would force it and could cause visual glitches, H is a better h that doesn't give problems by itslef (?)(https://tex.stackexchange.com/questions/132106/difference-between-h-and-h-in-float-position)
+        \caption{ \href{https://agilemanifesto.org/principles.html}{Princípios do manifesto Agile}}\label{table:1}
+        \source{\cite{principios-agile-manifesto}}
         \begin{tabularx}{\textwidth} { 
           >{\raggedright\arraybackslash}X 
           >{\raggedright\arraybackslash}X }
@@ -137,8 +139,6 @@
             %\hline
             \textbullet\ As melhores arquiteturas, requisitos e designs surgem de equipas organizadas por si mesmas. & \textbullet\ Software a funcionar é a principal medida de progresso.
         \end{tabularx}
-        \caption{ \href{https://agilemanifesto.org/principles.html}{Princípios do manifesto Agile}}\label{table:1}
-        \source{\cite{principios-agile-manifesto}}
       \end{table}
 
       O método ideal dependerá da do projeto, um método Waterfall é mais indicado para projetos menores e previsíveis, enquanto Agile é indicada para projetos mais avançados.

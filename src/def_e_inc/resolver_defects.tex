@@ -4,6 +4,9 @@
         
         \begin{table}[htbp] % htbp
             \centering
+            \caption{Comparação de Plataformas Low-Code}
+            \label{defeitos_trabalhados}
+            \source{Documentação Interna} % 1- https://impalaintech.com/blog/mendix-vs-outsystems-vs-appian/
             \begin{tblr}{
                 % example for tblr: https://tex.stackexchange.com/questions/603349/tabularray-and-new-command-for-multicolumn-cells
                 % another example: https://tex.stackexchange.com/questions/605676/tabularray-how-to-control-the-vertical-alignment-of-the-cells-contents
@@ -31,9 +34,6 @@
 
             ``Index out of bounds when submiting cancel and replace'' & Refira à Secção \ref{index_out_of_bounds_defect} & Urgente \\
             \end{tblr}
-            \caption{Comparação de Plataformas Low-Code}
-            \label{defeitos_trabalhados}
-            \source{Documentação Interna} % 1- https://impalaintech.com/blog/mendix-vs-outsystems-vs-appian/
         \end{table}
 
         Vamos, primeiramente, detalhar a forma de análise de \textit{defects}:
@@ -66,6 +66,8 @@
 
             \begin{table}[htbp] % 
                 \centering
+                \caption{Detalhes do defeito '\textit{Index out of bounds when submitting cancel and replace}'}\label{table:defect1}
+                \source{Documentação Interna}
                 \begin{tabularx}{1\textwidth}{|>{\raggedright\arraybackslash}X|}
                     \hline
                     \rowcolor{lightgray}
@@ -109,8 +111,6 @@
                     \\
                     \hline
                 \end{tabularx}
-                \caption{Detalhes do defeito '\textit{Index out of bounds when submitting cancel and replace}'}\label{table:defect1}
-                \source{Documentação Interna}
               \end{table}
 
             \subsubsubsection*{Análise e Resolução:}
@@ -164,6 +164,8 @@
 
             \begin{table}[htbp] % htbp
                 \centering
+                \caption{Detalhes do defeito '\textit{Stamp Visibility | Broker - The UW stamps should be filtered by the company}'}\label{table:defect2}
+                \source{Documentação Interna}
                 \begin{tabularx}{1\textwidth}{|>{\raggedright\arraybackslash}X|}
                     \hline
                     \rowcolor{lightgray}
@@ -192,8 +194,6 @@
                     \\
                     \hline
                 \end{tabularx}
-                \caption{Detalhes do defeito '\textit{Stamp Visibility | Broker - The UW stamps should be filtered by the company}'}\label{table:defect2}
-                \source{Documentação Interna}
             \end{table}
             
             \subsubsubsection*{Análise e Resolução:}
@@ -202,6 +202,8 @@
 
                 \begin{table}[H] % htbp
                     \centering
+                    \caption{Detalhes da US ``\textit{List of Stamps - Add a Stamp}''}\label{table:us1}
+                    \source{Documentação Interna}
                     \begin{tabularx}{1\textwidth}{|>{\raggedright\arraybackslash}X|}
                         \hline
                         \rowcolor{lightgray}
@@ -242,8 +244,6 @@
                         \\
                         \hline
                     \end{tabularx}
-                    \caption{Detalhes da US ``\textit{List of Stamps - Add a Stamp}''}\label{table:us1}
-                    \source{Documentação Interna}
                 \end{table}
 
                 Após a análise desta US, deduziu-se que se tratava de um GAP, isto porque na US original dizia ``por defeito, mostrar uma lista de carimbos ATIVOS para a organização'', não implicando que devam ser filtrados por empresa. Esta filtragem não se faz na aplicação, e isso torna-se evidente neste caso em que o utilizador pertence a várias equipas de diferentes empresas da mesma organização.
