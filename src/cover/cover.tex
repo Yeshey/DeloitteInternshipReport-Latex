@@ -1,71 +1,76 @@
 
+% Title of the Article
+\title{
+    \rule{\textwidth}{2pt}\\[2ex]
+    \medskip
+    \Large\bfseries\centering Modernização de Operações de Seguros: \\
+    Análise Abrangente de uma Abordagem Low-Code Multifacetada para Desenvolvimento Escalável
+    \rule{\textwidth}{2pt}
+}
+
+% Authors
+\author{%
+  Almeida, João Filipe\\
+  \texttt{a2020144466@isec.pt}
+%  \and ...
+}
+\renewcommand\maketitlehooka{%
+  \begin{center}
+    \centering
+    \includesvg[width=0.4\textwidth]{imgs/Deloitte.svg}  % Adjust the width as needed
+    \hfill
+    \includegraphics[width=0.4\textwidth]{imgs/logo-isec-transparente.png}  % Adjust the width as needed
+    \medskip
+    \begin{center}
+    {\footnotesize 
+    Deloitte Touche Tohmatsu Limited \& Instituto Superior de Engenharia de Coimbra \\ % should I use \hspace{0.5cm}?
+    }
+    \end{center}
+  \end{center}%
+}
+
+
+
+\newgeometry{margin=1in}
+
+\pagenumbering{roman}  % Set page numbering to Roman numerals for the front matter
+\setcounter{secnumdepth}{0} % Sections don't have numbering in the frontmatter
+% \frontmatter % only for book style documents
+
+\maketitle
+% \date{\today}
+
+\thispagestyle{empty} % removes numbering from first page
+
+\vspace{-0.5cm}
+
+\begin{center}
+{\small 
+ISEC Coimbra, Dept. de Engenharia Informática e Sistemas \\
+}
+{\footnotesize
+Licenciatura em Engenharia Informática - Desenvolvimento de Aplicações \\ }
+\end{center}
+
+
+\vfill % to put stuff in the end of the page
+
+{\centering
+    \large{Relatório de Estágio} \\
+    \vspace{0.5cm} % Adjust vertical space as needed
+
+    {\small
+    Supervisionado por: \\
+    Carlos Morais, Deloitte \\
+    Filipe Sá, ISEC \\ }
+}
+
+\baselineskip=\normalbaselineskip
+\restoregeometry
+
+\begin{comment}
 \begin{titlepage}
   \thispagestyle{empty} % removes numbering from first page
   \includepdf[fitpaper=true]{src/cover/capa.pdf}
 \end{titlepage}
-
-\begin{comment}
-
-\definecolor{redstrip}{RGB}{220,20,60}
-\definecolor{bordergray}{RGB}{150,150,150}
-
-\AddToShipoutPictureBG*{%
-  \AtPageLowerLeft{%
-    \color{redstrip}%
-    \rule{0.33\paperwidth}{\paperheight}%
-    \color{bordergray}%
-    \put(0,0){\makebox(0,0)[l]{\rule[-\paperheight]{3pt}{2\paperheight}}}%
-    \put(5,-\paperheight+5){\includegraphics[width=2cm]{example-image}} % Adjust the position and size of the image
-  }%
-}
-
-\begin{tikzpicture}[overlay, remember picture]
-  \node[anchor=north west, %anchor is upper left corner of the graphic
-        xshift=5cm, %shifting around
-        yshift=-5cm] 
-       at (current page.north west) %left upper corner of the page
-       {\includegraphics[width=5cm]{src/cover/LogoISEC2.png}}; 
-  \end{tikzpicture}
-
-\begin{tikzpicture}[remember picture,overlay]
-  % Desenhar a parte vermelha
-  \fill[red] (current page.north west) rectangle ++(0.33\paperwidth,-\paperheight);
-  % Adicionar a imagem dentro da parte vermelha
-  \node[anchor=south west, inner sep=0] at (current page.south west) {
-      \begin{minipage}[b]{0.33\paperwidth}
-          \includegraphics[width=\linewidth]{example-image}
-      \end{minipage}
-  };
-\end{tikzpicture}
-
-
-
-\definecolor{redstrip}{RGB}{220,20,60}
-\definecolor{bordergray}{RGB}{150,150,150}
-
-\AddToShipoutPictureBG*{%
-  \AtPageLowerLeft{%
-    \color{redstrip}%
-    \rule{0.33\paperwidth}{\paperheight}%
-    \color{bordergray}%
-    \put(0,0){\makebox(0,0)[l]{\rule[-\paperheight]{3pt}{2\paperheight}}}%
-    \put(5,-\paperheight+5){\includegraphics[width=2cm]{example-image}} % Adjust the position and size of the image
-  }%
-}
-
-
-\title{Modernização de Operações de Seguros: \\
-Análise Abrangente de uma Abordagem Low-Code Multifacetada para Desenvolvimento Escalável}
-
-\author{%
-  Almeida, João Filipe\\
-  \texttt{a2020144466@isec.pt}
-}
-
-\date{} % remove date
-
-\maketitle
-
 \end{comment}
-
-
